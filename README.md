@@ -1,4 +1,9 @@
 # Terminreservierungssystem
 Terminreservierungssystem
 
-MasterBrain Oswald Krainer
+Team:
+Oskar Koiner
+Simon Appel
+Manuel Seemann
+Paul Burian
+Batu Akdin
