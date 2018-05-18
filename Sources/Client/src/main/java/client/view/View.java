@@ -15,7 +15,8 @@ import java.awt.*;
 
 public class View extends JFrame{
     private Controller c;
-    private JPanel p;
+    private JPanel lp;
+    private JPanel rp;
 
 
     /**
@@ -33,9 +34,11 @@ public class View extends JFrame{
         this.setLayout(new FlowLayout ());
 
         this.c = c;
-        this.p = new LoginPanel();
+        this.lp = new LoginPanel();
+        this.rp = new RegistrierungPanel();
 
-        this.add(this.p);
+        this.add(this.lp);
+        //this.add(this.rp);
 
 
         this.setVisible(true);
