@@ -20,6 +20,9 @@ public class Employee {
     @Column(name = "dept")
     private String dept;
 
+    @Column(name = "tmp")
+    private String tmp;
+
     public Employee() {
 
     }
@@ -29,6 +32,7 @@ public class Employee {
         this.setFirstName(firstName);
         this.setLastName(lastName);
         this.setDept(dept);
+        tmp = "halo";
     }
 
     public int getId() {
