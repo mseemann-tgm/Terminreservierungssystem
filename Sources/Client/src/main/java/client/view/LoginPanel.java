@@ -1,9 +1,12 @@
 package client.view;
 
+import client.controller.Controller;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class LoginPanel extends JPanel {
+    private Controller c;
     private JLabel benutzerText;
     private JLabel passwortText;
     private JTextField benutzerEingabe;
@@ -11,7 +14,8 @@ public class LoginPanel extends JPanel {
     private JButton eingabeButton;
     private JButton registrierungButton;
 
-    public LoginPanel(){
+    public LoginPanel(Controller c){
+        this.c = c;
         this.setLayout(new GridLayout(3, 2));
         this.benutzerText = new JLabel("Benutzer:");
         this.passwortText = new JLabel("Passwort:");
@@ -27,7 +31,11 @@ public class LoginPanel extends JPanel {
         this.add(this.registrierungButton);
         this.add(this.eingabeButton);
 
+        this.eingabeButton.addActionListener(this.c);
 
-
+    }
+    public boolean eingabeButtonGedrueckt (Object b){
+        if(b == this.eingabeButton)return true;
+        return false;
     }
 }
