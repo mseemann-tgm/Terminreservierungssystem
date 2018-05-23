@@ -24,9 +24,7 @@ public class BenutzerSuchenPanel extends JPanel {
         this.benutzerEingabe.setPreferredSize(new Dimension(90,25));
 
 
-        this.benutzerListe.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
-        this.benutzerListe.setLayoutOrientation(JList.HORIZONTAL_WRAP);
-        this.benutzerListe.setVisibleRowCount(-1);
+
 
         this.benutzerListeScroll = new JScrollPane(this.benutzerListe);
         this.benutzerListeScroll.setPreferredSize(new Dimension(250, 80));

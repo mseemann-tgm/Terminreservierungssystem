@@ -18,6 +18,7 @@ public class View extends JFrame{
     private JPanel lp;
     private JPanel rp;
     private JPanel bsp;
+    private  JPanel ep;
 
 
     /**
@@ -38,10 +39,12 @@ public class View extends JFrame{
         this.lp = new LoginPanel();
         this.rp = new RegistrierungPanel();
         this.bsp = new BenutzerSuchenPanel();
+        this.ep = new EventPanel();
 
         //this.add(this.lp);
         //this.add(this.rp);
-        this.add(this.bsp);
+        //this.add(this.bsp);
+        this.add(this.ep);
 
 
         this.setVisible(true);
