@@ -8,7 +8,7 @@ public class JpaTest {
 
     public static void main(String[] args) {
 
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("EmployeePU");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("Data");
         em = emf.createEntityManager();
 
         createEmployee(1, "Ravi", "Raj", "Textile");
