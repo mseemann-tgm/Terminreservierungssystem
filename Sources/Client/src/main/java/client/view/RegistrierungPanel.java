@@ -1,9 +1,12 @@
 package client.view;
 
+import client.controller.Controller;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class RegistrierungPanel extends JPanel {
+    private Controller c;
     private JLabel benutzerText;
     private JLabel passwortText;
     private JLabel emailText;
@@ -12,7 +15,8 @@ public class RegistrierungPanel extends JPanel {
     private JTextField emailEingabe;
     private JButton eingabeButton;
 
-    public RegistrierungPanel(){
+    public RegistrierungPanel(Controller c){
+        this.c = c;
         this.setLayout(new GridLayout(4, 2));
         this.benutzerText = new JLabel("Benutzer:");
         this.passwortText = new JLabel("Passwort:");
@@ -29,5 +33,12 @@ public class RegistrierungPanel extends JPanel {
         this.add(this.emailText);
         this.add(this.emailEingabe);
         this.add(this.eingabeButton);
+
+        this.eingabeButton.addActionListener(this.c);
+    }
+
+    public boolean eingabeButtonGedrueckt (Object b){
+        if(b == this.eingabeButton)return true;
+        return false;
     }
 }

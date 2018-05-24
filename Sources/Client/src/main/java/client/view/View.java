@@ -43,11 +43,35 @@ public class View extends JFrame{
         this.ep = ep;
 
         this.add(this.lp);
-        //this.add(this.rp);
-        //this.add(this.bsp);
-        //this.add(this.ep);
+        this.add(this.rp);
+        this.add(this.ep);
+        this.add(this.bsp);
+
+
+        this.rp.setVisible(false);
+        this.bsp.setVisible(false);
+        this.ep.setVisible(false);
 
 
         this.setVisible(true);
+    }
+
+    public void changeLogin(){
+        this.lp.setVisible(false);
+        this.ep.setVisible(true);
+        this.bsp.setVisible(true);
+        this.repaint();
+    }
+    public void changeRegistrierung(){
+        this.lp.setVisible(false);
+        this.rp.setVisible(true);
+        this.repaint();
+    }
+
+    public void changeLoginReg(){
+        this.rp.setVisible(false);
+        this.ep.setVisible(true);
+        this.bsp.setVisible(true);
+        this.repaint();
     }
 }

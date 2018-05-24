@@ -16,7 +16,7 @@ public class Controller implements ActionListener{
 
 	public Controller(){
 		this.lp = new LoginPanel(this);
-		this.rp = new RegistrierungPanel();
+		this.rp = new RegistrierungPanel(this);
 		this.bsp = new BenutzerSuchenPanel();
 		this.ep = new EventPanel();
 		this.v = new View(this,this.lp, this.rp, this.bsp, this.ep);
@@ -25,8 +25,13 @@ public class Controller implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (this.lp.eingabeButtonGedrueckt((Object) e.getSource()) == true) {
-			this.v.getContentPane().removeAll();
-			this.v.getContentPane().add(this.ep);
+			this.v.changeLogin();
+		}
+		if (this.lp.registrierungButtonGedrueckt((Object) e.getSource()) == true) {
+			this.v.changeRegistrierung();
+		}
+		if (this.rp.eingabeButtonGedrueckt((Object) e.getSource()) == true) {
+			this.v.changeLoginReg();
 		}
 	}
 

@@ -32,10 +32,15 @@ public class LoginPanel extends JPanel {
         this.add(this.eingabeButton);
 
         this.eingabeButton.addActionListener(this.c);
+        this.registrierungButton.addActionListener(this.c);
 
     }
     public boolean eingabeButtonGedrueckt (Object b){
         if(b == this.eingabeButton)return true;
+        return false;
+    }
+    public boolean registrierungButtonGedrueckt (Object b){
+        if(b == this.registrierungButton)return true;
         return false;
     }
 }
