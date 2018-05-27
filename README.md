@@ -25,8 +25,13 @@ mvn exec:java
 ```
 ### Server
 Benutzte Technologien:
-* Jax-rs Server API
+* Spring rest API
 * HQL Querries
+Deployment:
+```
+mvn package
+```
+-> then run Main.main()
 ### Data
 Benutzte Technologien:
 * JPA Hibernate
