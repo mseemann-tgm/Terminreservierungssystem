@@ -18,6 +18,7 @@ Die Applikationen sind IntelliJ Maven Projekte.
 Benutzte Technologien:
 * Java-Swing
 * Jax-rs Client API
+
 Execution:
 ```
 mvn package
@@ -27,6 +28,7 @@ mvn exec:java
 Benutzte Technologien:
 * Spring rest API
 * HQL Querries
+
 Deployment:
 ```
 mvn package
@@ -35,7 +37,9 @@ mvn package
 ### Data
 Benutzte Technologien:
 * JPA Hibernate
+
 Deployment:
 ```
 mvn package
 ```
+Addresse, Port, Username, Passwork und Datenbankname der MySQL-Datenbank müssen in `persistence.xml` eingetragen sein (Änderungen wenns geht nicht zu Git hinzufügen).
