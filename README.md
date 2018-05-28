@@ -27,7 +27,7 @@ mvn exec:java
 ### Server
 Benutzte Technologien:
 * Spring rest API
-* HQL Querries
+* JPQL Querries
 
 Deployment:
 ```
