@@ -1,25 +1,22 @@
 package data;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.OneToMany;
 import java.util.Map;
 
 @Entity
-@Table(name = "Event")
 public class Event {
 
-	@Id
-    @Column(name = "name", nullable = false)
-    private String name;
-
-	private Map<Teilnehmer,Termin> auswahl;
+    @Id
+	private String name;
 
 	private Rolle[] rolle;
 
+    @OneToMany
 	private Termin[] termin;
 
+    @OneToMany
 	private Kommentar[] kommentar;
 
 }

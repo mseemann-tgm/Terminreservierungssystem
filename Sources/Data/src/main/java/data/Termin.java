@@ -1,20 +1,17 @@
 package data;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import java.util.Date;
 
 @Entity
-@Table(name="Termin")
 public class Termin {
 
+    @Temporal(TemporalType.TIMESTAMP)
 	private Date zeitpunkt;
 
 	@Id
-	@Column(name="id")
 	private int ID;
-
-	private Auswahl[] auswahl;
-
 }
