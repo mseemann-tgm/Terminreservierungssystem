@@ -2,6 +2,8 @@ package data;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.List;
 
 @Entity
 public class User {
@@ -11,6 +13,30 @@ public class User {
 
 	private String passwort;
 
-	private Rolle[] rolle;
+	@OneToMany(mappedBy = "user")
+	private List<Rolle> rolle;
 
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getPasswort() {
+		return passwort;
+	}
+
+	public void setPasswort(String passwort) {
+		this.passwort = passwort;
+	}
+
+	public List<Rolle> getRolle() {
+		return rolle;
+	}
+
+	public void setRolle(List<Rolle> rolle) {
+		this.rolle = rolle;
+	}
 }
