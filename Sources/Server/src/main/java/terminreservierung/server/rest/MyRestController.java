@@ -2,11 +2,15 @@ package terminreservierung.server.rest;
 
 import org.springframework.web.bind.annotation.*;
 
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
 @RestController
 public class MyRestController {
 
+    ConcurrentHashMap<String,SessionCertificate> certificates = new ConcurrentHashMap<String, SessionCertificate>();
+
+    //Delete sometimes
     private static final String template = "Hello, %s!";
     private final AtomicLong counter = new AtomicLong();
 
