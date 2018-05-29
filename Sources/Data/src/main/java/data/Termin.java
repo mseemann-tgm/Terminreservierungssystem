@@ -16,6 +16,13 @@ public class Termin {
     @JoinColumn(name="event_name")
     private Event event;
 
+    public Termin() {
+    }
+
+    public Termin(int ID) {
+        this.ID = ID;
+    }
+
     public Event getEvent() {
         return event;
     }
