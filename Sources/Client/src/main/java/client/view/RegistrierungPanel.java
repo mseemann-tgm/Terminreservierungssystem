@@ -13,6 +13,7 @@ public class RegistrierungPanel extends JPanel {
     private JTextField benutzerEingabe;
     private JTextField passwortEingabe;
     private JTextField emailEingabe;
+    private JButton zurueckButton;
     private JButton eingabeButton;
 
     public RegistrierungPanel(Controller c){
@@ -24,7 +25,8 @@ public class RegistrierungPanel extends JPanel {
         this.benutzerEingabe = new JTextField();
         this.passwortEingabe = new JTextField();
         this.emailEingabe = new JTextField();
-        this.eingabeButton = new JButton("Eingabe");
+        this.zurueckButton = new JButton("Zurück");
+        this.eingabeButton = new JButton("Registrieren");
 
         this.add(this.benutzerText);
         this.add(this.benutzerEingabe);
@@ -32,13 +34,20 @@ public class RegistrierungPanel extends JPanel {
         this.add(this.passwortEingabe);
         this.add(this.emailText);
         this.add(this.emailEingabe);
+        this.add(this.zurueckButton);
         this.add(this.eingabeButton);
 
         this.eingabeButton.addActionListener(this.c);
+        this.zurueckButton.addActionListener(this.c);
     }
 
     public boolean eingabeButtonGedrueckt (Object b){
         if(b == this.eingabeButton)return true;
+        return false;
+    }
+
+    public boolean zurueckButtonGedrueckt (Object b){
+        if(b == this.zurueckButton)return true;
         return false;
     }
 }

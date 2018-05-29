@@ -1,10 +1,13 @@
 package client.view;
 
+import client.controller.Controller;
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
 public class BenutzerSuchenPanel extends JPanel {
+    private Controller c;
     private JLabel benutzerEingabeText;
     private  JTextField benutzerEingabe;
     private JButton benutzerEingabeButton;
@@ -12,8 +15,9 @@ public class BenutzerSuchenPanel extends JPanel {
     private JScrollPane benutzerListeScroll;
     private JPanel eingabePanel;
 
-    public BenutzerSuchenPanel(){
-        String [] data = {"Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin"};
+    public BenutzerSuchenPanel(Controller c){
+        /*Test Daten für die Liste*/String [] data = {"Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin"};
+        this.c = c;
         this.setLayout(new GridLayout(2,3));
         this.benutzerEingabeText = new JLabel("Benutzername: ");
         this.benutzerEingabe = new JTextField();
@@ -36,6 +40,13 @@ public class BenutzerSuchenPanel extends JPanel {
         this.eingabePanel.add(this.benutzerEingabeButton);
         this.add(this.benutzerListeScroll);
 
+        this.benutzerEingabeButton.addActionListener(c);
 
+
+    }
+
+    public boolean benutzerEingabeButtonGedrueckt (Object b){
+        if(b == this.benutzerEingabeButton)return true;
+        return false;
     }
 }

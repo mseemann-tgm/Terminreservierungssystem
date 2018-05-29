@@ -1,6 +1,7 @@
 package client.view;
 
 import client.controller.Controller;
+import com.sun.scenario.effect.impl.prism.PrFilterContext;
 import sun.rmi.runtime.Log;
 
 
@@ -20,6 +21,7 @@ public class View extends JFrame{
     private RegistrierungPanel rp;
     private BenutzerSuchenPanel bsp;
     private  EventPanel ep;
+    private ProfilPanel pp;
 
 
     /**
@@ -28,7 +30,7 @@ public class View extends JFrame{
      * @param c Controller
      */
 
-    public View(Controller c, LoginPanel lp, RegistrierungPanel rp, BenutzerSuchenPanel bsp, EventPanel ep){
+    public View(Controller c, LoginPanel lp, RegistrierungPanel rp, BenutzerSuchenPanel bsp, EventPanel ep, ProfilPanel pp){
 
         this.setTitle("Terminreservierungssystem");
         this.setSize(1000, 500);
@@ -41,16 +43,25 @@ public class View extends JFrame{
         this.rp = rp;
         this.bsp = bsp;
         this.ep = ep;
+        this.pp = pp;
 
         this.add(this.lp);
         this.add(this.rp);
+        this.add(this.pp);
         this.add(this.ep);
         this.add(this.bsp);
 
 
-        this.rp.setVisible(false);
+        /*this.rp.setVisible(false);
         this.bsp.setVisible(false);
         this.ep.setVisible(false);
+        this.pp.setVisible(false);*/
+        this.rp.setVisible(true);
+        this.pp.setVisible(false);
+        this.bsp.setVisible(false);
+        this.ep.setVisible(false);
+        this.lp.setVisible(false);
+
 
 
         this.setVisible(true);
@@ -58,6 +69,7 @@ public class View extends JFrame{
 
     public void changeLogin(){
         this.lp.setVisible(false);
+        this.pp.setVisible(true);
         this.ep.setVisible(true);
         this.bsp.setVisible(true);
         this.repaint();
@@ -70,8 +82,22 @@ public class View extends JFrame{
 
     public void changeLoginReg(){
         this.rp.setVisible(false);
+        this.pp.setVisible(true);
         this.ep.setVisible(true);
         this.bsp.setVisible(true);
         this.repaint();
     }
+    public void zurueckReg(){
+        this.rp.setVisible(false);
+        this.lp.setVisible(true);
+        this.repaint();
+    }
+    public void abmelden(){
+        this.pp.setVisible(false);
+        this.ep.setVisible(false);
+        this.bsp.setVisible(false);
+        this.lp.setVisible(true);
+        this.repaint();
+    }
+
 }

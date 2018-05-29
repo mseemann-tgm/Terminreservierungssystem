@@ -17,7 +17,8 @@ public class LoginPanel extends JPanel {
     private static final Border border = BorderFactory.createLineBorder(new Color(0, 150, 0), 3);
     private static final Border border2 = new EmptyBorder(10, 10, 10, 10);
 
-    public LoginPanel(){
+    public LoginPanel(Controller c){
+        this.c = c;
         this.setLayout(new GridLayout(3, 2));
         this.benutzerText = new JLabel();
         this.passwortText = new JLabel();

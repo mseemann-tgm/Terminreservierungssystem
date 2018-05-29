@@ -12,14 +12,17 @@ public class Controller implements ActionListener{
 	private RegistrierungPanel rp;
 	private BenutzerSuchenPanel bsp;
 	private EventPanel ep;
+	private ProfilPanel pp;
 	private View v;
 
+
 	public Controller(){
-		this.lp = new LoginPanel();
+		this.lp = new LoginPanel(this);
 		this.rp = new RegistrierungPanel(this);
-		this.bsp = new BenutzerSuchenPanel();
+		this.bsp = new BenutzerSuchenPanel(this);
 		this.ep = new EventPanel();
-		this.v = new View(this,this.lp, this.rp, this.bsp, this.ep);
+		this.pp = new ProfilPanel(this);
+		this.v = new View(this,this.lp, this.rp, this.bsp, this.ep, this.pp);
 	}
 
 	@Override
@@ -32,6 +35,15 @@ public class Controller implements ActionListener{
 		}
 		if (this.rp.eingabeButtonGedrueckt((Object) e.getSource()) == true) {
 			this.v.changeLoginReg();
+		}
+		if (this.rp.zurueckButtonGedrueckt((Object) e.getSource()) == true) {
+			this.v.zurueckReg();
+		}
+		if (this.pp.abmeldenButtonGedrueckt((Object) e.getSource()) == true) {
+			this.v.abmelden();
+		}
+		if (this.bsp.benutzerEingabeButtonGedrueckt((Object) e.getSource()) == true) {
+			//BenutzerSuchen aufrufen
 		}
 	}
 
