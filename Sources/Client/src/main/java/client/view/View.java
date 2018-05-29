@@ -52,15 +52,16 @@ public class View extends JFrame{
         this.add(this.bsp);
 
 
-        /*this.rp.setVisible(false);
+        this.rp.setVisible(false);
         this.bsp.setVisible(false);
         this.ep.setVisible(false);
-        this.pp.setVisible(false);*/
+        this.pp.setVisible(false);
+        /*//Test für mseemann
         this.rp.setVisible(true);
         this.pp.setVisible(false);
         this.bsp.setVisible(false);
         this.ep.setVisible(false);
-        this.lp.setVisible(false);
+        this.lp.setVisible(false);*/
 
 
 
