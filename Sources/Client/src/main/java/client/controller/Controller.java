@@ -15,7 +15,7 @@ public class Controller implements ActionListener{
 	private View v;
 
 	public Controller(){
-		this.lp = new LoginPanel(this);
+		this.lp = new LoginPanel();
 		this.rp = new RegistrierungPanel(this);
 		this.bsp = new BenutzerSuchenPanel();
 		this.ep = new EventPanel();
