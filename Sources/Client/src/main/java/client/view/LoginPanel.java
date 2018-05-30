@@ -55,11 +55,11 @@ public class LoginPanel extends JPanel {
 
         //South Start
         this.con2 = new Container();
-        this.con1.setLayout(new GridLayout(2, 0));
+        this.con2.setLayout(new GridLayout(2, 0));
 
-        this.beautifulB(eingabeButton, "Eingabe:", con2);
+        this.beautifulB(eingabeButton, "Login", con2);
 
-        this.beautifulB(registrierungButton, "Registrieren:", con2);
+        this.beautifulB(registrierungButton, "Registrieren", con2);
         //South End
 
         this.add(con1);
@@ -78,30 +78,12 @@ public class LoginPanel extends JPanel {
         return false;
     }
 
-    private void beautifulB(JButton b, String text){
-        b.setText(text);
-        b.setFont(new Font(b.getFont().getName(), 0, 15));
-        b.setBackground(new Color(0, 50, 0));
-        b.setOpaque(true);
-        b.setForeground(Color.lightGray);
-        b.setBorder(new CompoundBorder(border,border2));
-    }
-
-    private void beautifulB(JButton b, String text, String cord){
-        b.setText(text);
-        b.setFont(new Font(b.getFont().getName(), 0, 15));
-        b.setBackground(new Color(0, 50, 0));
-        b.setOpaque(true);
-        b.setForeground(Color.lightGray);
-        b.setBorder(new CompoundBorder(border,border2));
-    }
-
     private void beautifulB(JButton b, String text, Container con){
         b.setText(text);
         b.setFont(new Font(b.getFont().getName(), 0, 15));
-        b.setBackground(new Color(0, 50, 0));
+        //b.setBackground(new Color(0, 50, 0));
         b.setOpaque(true);
-        b.setForeground(Color.white);
+        b.setForeground(new Color(0, 50, 0));
         b.setBorder(new CompoundBorder(border,border2));
         con.add(b);
     }

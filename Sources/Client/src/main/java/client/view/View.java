@@ -34,7 +34,7 @@ public class View extends JFrame{
 
         this.setTitle("Terminreservierungssystem");
         this.setSize(1000, 500);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(3);
         this.setLocationRelativeTo(null);
         this.setLayout(new FlowLayout ());
 
