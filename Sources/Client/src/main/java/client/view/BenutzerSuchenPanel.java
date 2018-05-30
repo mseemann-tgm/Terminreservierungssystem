@@ -16,13 +16,12 @@ public class BenutzerSuchenPanel extends JPanel {
     private JPanel eingabePanel;
 
     public BenutzerSuchenPanel(Controller c){
-        /*Test Daten für die Liste*/String [] data = {"Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin"};
         this.c = c;
         this.setLayout(new GridLayout(2,3));
         this.benutzerEingabeText = new JLabel("Benutzername: ");
         this.benutzerEingabe = new JTextField();
         this.benutzerEingabeButton = new JButton("Suchen");
-        this.benutzerListe = new JList(data);
+        this.benutzerListe = new JList();
         this.eingabePanel = new JPanel();
         this.eingabePanel.setLayout(new FlowLayout());
         this.benutzerEingabe.setPreferredSize(new Dimension(90,25));

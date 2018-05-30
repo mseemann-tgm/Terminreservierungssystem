@@ -8,12 +8,16 @@ public class EventPanel extends JPanel {
     private JScrollPane eventListeScroll;
 
     public EventPanel(){
-        String [] events = {"Alex","Arlllllllllllllllllmin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin","Alex","Armin"};
+        String [] events = {"Keine Events"};
         this.setLayout(new FlowLayout());
         this.eventListe = new JList(events);
         this.eventListeScroll = new JScrollPane(this.eventListe);
         this.eventListeScroll.setPreferredSize(new Dimension(250, 80));
 
         this.add(this.eventListeScroll);
+    }
+
+    public void setEventListe(String [] events){
+        this.eventListe.setListData(events);
     }
 }

@@ -1,6 +1,7 @@
 package client.controller;
 
 import client.commands.BenutzerSuchenCommand;
+import client.commands.GetEventsCommand;
 import client.commands.Task;
 import client.view.*;
 
@@ -24,6 +25,11 @@ public class Controller implements ActionListener{
 		this.ep = new EventPanel();
 		this.pp = new ProfilPanel(this);
 		this.v = new View(this,this.lp, this.rp, this.bsp, this.ep, this.pp);
+
+		Task t = new Task();
+		GetEventsCommand com = new GetEventsCommand(this.ep);
+		t.setCommand(com);
+		t.run();
 	}
 
 	@Override
