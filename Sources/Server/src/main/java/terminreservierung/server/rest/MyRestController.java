@@ -29,9 +29,6 @@ public class MyRestController {
         counter.incrementAndGet();
     }
 
-    /*
-
-     */
     @PostMapping("/incby")
     public void update(@RequestBody ExampleDataClass w){
         System.out.println("Incby post request");
