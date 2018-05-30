@@ -49,4 +49,12 @@ public class BenutzerSuchenPanel extends JPanel {
         if(b == this.benutzerEingabeButton)return true;
         return false;
     }
+
+    public String getBenutzerEingabe(){
+        return this.benutzerEingabe.getText();
+    }
+
+    public void setBenutzerListe(String [] benutzerGesucht){
+        this.benutzerListe.setListData(benutzerGesucht);
+    }
 }

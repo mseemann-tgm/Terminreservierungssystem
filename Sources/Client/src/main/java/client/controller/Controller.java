@@ -46,9 +46,9 @@ public class Controller implements ActionListener{
 		if (this.bsp.benutzerEingabeButtonGedrueckt((Object) e.getSource()) == true) {
 			//BenutzerSuchen aufrufen
 			Task t = new Task();
-			BenutzerSuchenCommand com = new BenutzerSuchenCommand(/*ajsfdhkjashdf*/);
+			BenutzerSuchenCommand com = new BenutzerSuchenCommand(this.bsp.getBenutzerEingabe(), this.bsp);
 			t.setCommand(com);
-			//t.run();
+			t.run();
 		}
 	}
 
