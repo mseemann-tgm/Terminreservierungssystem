@@ -1,5 +1,6 @@
 package client.controller;
 
+import client.commands.AnmeldeCommand;
 import client.commands.BenutzerSuchenCommand;
 import client.commands.GetEventsCommand;
 import client.commands.Task;
@@ -35,7 +36,10 @@ public class Controller implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (this.lp.eingabeButtonGedrueckt((Object) e.getSource()) == true) {
-			this.v.changeLogin();
+			Task t = new Task();
+			AnmeldeCommand com = new AnmeldeCommand(this.lp.getBenutzerEingabe(), this.lp.getPasswortEingabe(), this.lp, this.v);
+			t.setCommand(com);
+			t.run();
 		}
 		if (this.lp.registrierungButtonGedrueckt((Object) e.getSource()) == true) {
 			this.v.changeRegistrierung();

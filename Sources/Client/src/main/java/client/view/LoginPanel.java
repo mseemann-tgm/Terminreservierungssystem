@@ -150,5 +150,11 @@ public class LoginPanel extends JPanel {
         this.add(l, cord);
     }
 
+    public String getBenutzerEingabe(){
+        return this.benutzerEingabe.getText();
+    }
+    public String getPasswortEingabe(){
+        return this.passwortEingabe.getText();
+    }
 
 }
