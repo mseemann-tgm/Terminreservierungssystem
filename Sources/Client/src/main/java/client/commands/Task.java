@@ -13,11 +13,11 @@ public class Task implements Runnable {
 	}
 
 	public void run() {
-
+		command.execute();
 	}
 
 	public void setCommand(Command c) {
-
+		command = c;
 	}
 
 }

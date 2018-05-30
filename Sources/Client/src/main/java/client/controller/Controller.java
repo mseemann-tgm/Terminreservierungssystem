@@ -1,5 +1,6 @@
 package client.controller;
 
+import client.commands.BenutzerSuchenCommand;
 import client.commands.Task;
 import client.view.*;
 
@@ -44,6 +45,10 @@ public class Controller implements ActionListener{
 		}
 		if (this.bsp.benutzerEingabeButtonGedrueckt((Object) e.getSource()) == true) {
 			//BenutzerSuchen aufrufen
+			Task t = new Task();
+			BenutzerSuchenCommand com = new BenutzerSuchenCommand(/*ajsfdhkjashdf*/);
+			t.setCommand(com);
+			//t.run();
 		}
 	}
 
