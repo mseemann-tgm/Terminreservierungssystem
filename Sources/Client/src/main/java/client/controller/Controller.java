@@ -1,9 +1,6 @@
 package client.controller;
 
-import client.commands.AnmeldeCommand;
-import client.commands.BenutzerSuchenCommand;
-import client.commands.GetEventsCommand;
-import client.commands.Task;
+import client.commands.*;
 import client.view.*;
 
 import javax.swing.*;
@@ -45,7 +42,10 @@ public class Controller implements ActionListener{
 			this.v.changeRegistrierung();
 		}
 		if (this.rp.eingabeButtonGedrueckt((Object) e.getSource()) == true) {
-			this.v.changeLoginReg();
+			Task t = new Task();
+			RegistrierCommand com = new RegistrierCommand(this.rp.getBenutzerEingabe(), this.rp.getPasswortEingabe(), this.rp.getEmailEingabe(), this.rp, this.v);
+			t.setCommand(com);
+			t.run();
 		}
 		if (this.rp.zurueckButtonGedrueckt((Object) e.getSource()) == true) {
 			this.v.zurueckReg();

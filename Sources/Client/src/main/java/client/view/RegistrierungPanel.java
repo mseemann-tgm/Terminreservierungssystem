@@ -50,4 +50,13 @@ public class RegistrierungPanel extends JPanel {
         if(b == this.zurueckButton)return true;
         return false;
     }
+    public String getBenutzerEingabe(){
+        return this.benutzerEingabe.getText();
+    }
+    public String getPasswortEingabe(){
+        return this.passwortEingabe.getText();
+    }
+    public String getEmailEingabe(){
+        return this.emailEingabe.getText();
+    }
 }
