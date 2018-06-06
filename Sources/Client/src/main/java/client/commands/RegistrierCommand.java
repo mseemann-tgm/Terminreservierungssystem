@@ -1,6 +1,5 @@
 package client.commands;
 
-import client.commands.Command;
 import client.view.RegistrierungPanel;
 import client.view.View;
 
