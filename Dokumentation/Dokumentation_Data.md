@@ -14,7 +14,7 @@ Funktionalitäten benutzt werden.
   Mehr dazu: [Technologien Überblick](./Technologien_Overview.md)
 
 ## Design
-Siehe Astah
+Siehe Astah: [/Design](./../Design)
 
 ## Ausführen
 Duch Maven kann man das Projekt auf folgende weise kompeliert werden:
