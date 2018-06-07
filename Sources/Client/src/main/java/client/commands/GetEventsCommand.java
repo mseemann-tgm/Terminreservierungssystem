@@ -16,7 +16,7 @@ public class GetEventsCommand implements Command {
 	 *  
 	 */
 	public void execute() {
-		String [] events = {"Marco","Marco","Alex","Armin","Alex","Armin"};
+		String [] events = {"Marco","Marco","Alex","Armin","Alex","Armin","Marco","Marco","Alex","Armin","Alex","Armin","Marco","Marco","Alex","Armin","Alex","Armin","Marco","Marco","Alex","Armin","Alex","Armin","Marco","Marco","Alex","Armin","Alex","Armin",};
 		this.ep.setEventListe(events);
 	}
 
