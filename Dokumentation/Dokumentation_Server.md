@@ -1,3 +1,4 @@
+[Zurück zur Dokumentationsübersicht](./Dokumentation.md)
 # Server Dokumentation
 Der Server bildet die Verbindung zwischen den persistierten Daten und dem Client.
 Die Kommunikation zu dem Client erfolgt über eine REST Schnittstelle, die zu den Daten durch JPQL und JPA.
