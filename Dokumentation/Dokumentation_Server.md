@@ -15,6 +15,9 @@ Auch die Speicherung der SessionTolkens, also der Anmeldung, soll von dem Server
   * Junit
 
   Mehr dazu: [Technologien Überblick](./Technologien_Overview.md)
+  
+## Design
+Siehe Astah: [/Design](./../Design)
 
 ## Ausführen
 Duch Maven kann man das Projekt auf folgende weise kompeliert werden:
