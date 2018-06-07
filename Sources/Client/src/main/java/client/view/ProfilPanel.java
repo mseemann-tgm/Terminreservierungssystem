@@ -11,7 +11,8 @@ import java.awt.*;
 public class ProfilPanel extends JPanel {
     private Controller c;
     private JButton abmeldenButton;
-    private Container con1, con2;
+    private Container con1;
+    private JLabel blank;
     private static final Border border = BorderFactory.createLineBorder(new Color(0, 150, 0), 3);
     private static final Border border2 = new EmptyBorder(10, 10, 10, 10);
 
@@ -19,9 +20,13 @@ public class ProfilPanel extends JPanel {
         this.c = c;
         this.abmeldenButton = new JButton();
         this.con1 = new Container();
+        this.blank = new JLabel();
+        this.blank.setPreferredSize(new Dimension(100, 360));
         this.con1.setLayout(new BorderLayout());
 
-        this.beautifulB(abmeldenButton, "Abmelden", con1);
+        this.beautifulB(abmeldenButton, "Abmelden");
+        this.con1.add(blank, BorderLayout.CENTER);
+        this.con1.add(abmeldenButton, BorderLayout.SOUTH);
         this.add(con1);
 
         //this.add(this.abmeldenButton);
@@ -34,14 +39,13 @@ public class ProfilPanel extends JPanel {
         return false;
     }
 
-    private void beautifulB(JButton b, String text, Container con) {
+    private void beautifulB(JButton b, String text) {
         b.setText(text);
         b.setFont(new Font(b.getFont().getName(), 0, 25));
         //b.setBackground(new Color(0, 50, 0));
         b.setOpaque(true);
         b.setForeground(new Color(0, 50, 0));
         b.setBorder(new CompoundBorder(border, border2));
-        con.add(b);
     }
 
 }

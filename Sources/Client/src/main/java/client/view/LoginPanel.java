@@ -10,7 +10,7 @@ import java.awt.*;
 
 public class LoginPanel extends JPanel {
     private Controller c;
-    private JLabel benutzerText, passwortText, main, blank;
+    private JLabel benutzerText, passwortText, main;
     private JTextField benutzerEingabe, passwortEingabe;
     private Container con1, con2;
     private JButton eingabeButton, registrierungButton;
@@ -22,7 +22,6 @@ public class LoginPanel extends JPanel {
         this.setLayout(new GridLayout(4, 1));
         this.benutzerText = new JLabel();
         this.passwortText = new JLabel();
-        this.blank = new JLabel();
         this.benutzerEingabe = new JTextField();
         this.passwortEingabe = new JTextField();
         this.eingabeButton = new JButton();
