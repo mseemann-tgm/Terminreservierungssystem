@@ -13,16 +13,20 @@ public class Controller implements ActionListener{
 	private BenutzerSuchenPanel bsp;
 	private EventPanel ep;
 	private ProfilPanel pp;
+	private EventErstellenPanel eep;
 	private View v;
+	private Model m;
 
 
 	public Controller(){
 		this.lp = new LoginPanel(this);
 		this.rp = new RegistrierungPanel(this);
 		this.bsp = new BenutzerSuchenPanel(this);
-		this.ep = new EventPanel();
+		this.ep = new EventPanel(this);
 		this.pp = new ProfilPanel(this);
-		this.v = new View(this,this.lp, this.rp, this.bsp, this.ep, this.pp);
+		this.eep = new EventErstellenPanel(this);
+		this.m = new Model();
+		this.v = new View(this,this.lp, this.rp, this.bsp, this.ep, this.pp, this.eep);
 
 		Task t = new Task();
 		GetEventsCommand com = new GetEventsCommand(this.ep);
@@ -57,6 +61,18 @@ public class Controller implements ActionListener{
 			//BenutzerSuchen aufrufen
 			Task t = new Task();
 			BenutzerSuchenCommand com = new BenutzerSuchenCommand(this.bsp.getBenutzerEingabe(), this.bsp);
+			t.setCommand(com);
+			t.run();
+		}
+		if (this.ep.eventHinzuGedrueckt((Object) e.getSource()) == true) {
+			this.v.eventErstellen();
+		}
+		if (this.eep.zurueckGedrueckt((Object) e.getSource()) == true) {
+			this.v.zurueckEventErstellen();
+		}
+		if (this.eep.erstellenGedrueckt((Object) e.getSource()) == true) {
+			Task t = new Task();
+			EventErstellenCommand com = new EventErstellenCommand(this.eep.getNameEingabe(), this.eep.getRolleEingabe(), this.m.dateErstellen(this.eep.getTerminEinagbe()), this.eep.getKommentarEingabe(),this.eep, this.v);
 			t.setCommand(com);
 			t.run();
 		}
