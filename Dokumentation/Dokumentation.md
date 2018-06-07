@@ -51,3 +51,5 @@
   * Dieses Protokoll soll sich hauptsächlich auf die Struktur und den Aufbau,
     und nicht auf die Implementierung der einzelnen Komponenten fokusieren.
     Ausnahmen sind sehr projektspezifische Einzelheiten.
+  * Um überflüssiges Kommentieren zu vermeiden soll Code möglichst sprechend geschrieben werden.
+  * Testcases müssen durch den Namen die getestete Funktion beschreiben.
