@@ -4,24 +4,22 @@
   * ## Client
   Der Client ist die Benutzeroberfläche.
 
-  GitHub-Ordner:
-
-  Dokumentation:
+  GitHub-Ordner: [/Sources/Client](./../Sources/Client)
 
   * ##  Server
 
    Der Server verbindet den Client über eine REST-Schnittstelle mit der Datenspeicherung.
 
-  GitHub-Ordner:
+  GitHub-Ordner: [/Sources/Server](./../Sources/Server)
 
-  Dokumentation:
+  Dokumentation: [Server Dokumentation](./Dokumentation_Server.md)
 
   * ## Data
   Data sind die Gespeicherten Daten der Applikation, implementiert mittels JPA.
 
-  GitHub-Ordner:
+  GitHub-Ordner: [/Sources/Data](./../Sources/Data)
 
-  Dokumentation:
+  Dokumentation: [Data Dokumentation](./Dokumentation_Data.md)
 
 # Benutzte Technologien
   Das Projekt benutzt mehrere Technologien.
@@ -33,7 +31,7 @@
   * Mockito
   * Junit
 
-  Diese und deren Benutzung werden hier genauer beschrieben:
+  Diese und deren Benutzung werden hier genauer beschrieben: [Technologien Überblick](./Technologien_Overview.md)
 
 # Ausführung
   Zum funktionsfähigen Ausführen des Programmes, muss man die Komponenten in folgender Reihenfolge starten:
@@ -44,7 +42,7 @@
   Das Ausführen dieser Komponenten wird in den jeweiligen Dokumentationen beschrieben.
 
 # Weitere Informationen
-  * Überblick über den Aufbau der Software findet in den Astah-UML-Files:
+  * Überblick über den Aufbau der Software findet in den Astah-UML-Files: [/Design](./../Design)
 
 # Protokollrichtlinien
   * Dieses Protokoll soll keine, von dem Projekt kopierten, Grafiken oder Codesnippets enthalten
