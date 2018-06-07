@@ -18,7 +18,7 @@ public class AnmeldeCommand implements Command {
 		this.lp = lp;
 		this.v = v;
 		this.datao = new DataObjectMockImp();
-		this.datao.login(this.benutzer);
+
 	}
 
 	/**
@@ -27,7 +27,12 @@ public class AnmeldeCommand implements Command {
 	 *  
 	 */
 	public void execute() {
-		this.v.changeLogin();
+		boolean loginOk = this.datao.login(this.benutzer);
+		if(loginOk == true) {
+			this.v.changeLogin();
+		}else{
+			System.out.println("Kein User vorhanden");
+		}
 	}
 
 }

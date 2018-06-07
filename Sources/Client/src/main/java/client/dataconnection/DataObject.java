@@ -1,13 +1,15 @@
 package client.dataconnection;
 
+import client.datatype.Event;
 import client.datatype.Termin;
 import client.datatype.User;
 
 import java.util.List;
 
 public interface DataObject {
-    void register(User user);
-    void login(User user);
+    boolean register(User user);
+    boolean login(User user);
+    boolean eventErstellen(Event event);
     void kommentier(String eventName);
     void kommentarLöschen(String eventName, int kommentarID);
     void einladen(String eventName, String benutzerName);
