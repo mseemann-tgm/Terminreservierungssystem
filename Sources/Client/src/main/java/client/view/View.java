@@ -15,13 +15,14 @@ import java.awt.*;
  * @version 2018-05-17
  */
 
-public class View extends JFrame{
+public class View extends JFrame {
     private Controller c;
     private LoginPanel lp;
     private RegistrierungPanel rp;
     private BenutzerSuchenPanel bsp;
-    private  EventPanel ep;
+    private EventPanel ep;
     private ProfilPanel pp;
+    private Container con1;
 
 
     /**
@@ -30,13 +31,15 @@ public class View extends JFrame{
      * @param c Controller
      */
 
-    public View(Controller c, LoginPanel lp, RegistrierungPanel rp, BenutzerSuchenPanel bsp, EventPanel ep, ProfilPanel pp){
+    public View(Controller c, LoginPanel lp, RegistrierungPanel rp, BenutzerSuchenPanel bsp, EventPanel ep, ProfilPanel pp) {
 
         this.setTitle("Terminreservierungssystem");
-        this.setSize(700, 500);
+        this.setSize(800, 500);
         this.setDefaultCloseOperation(3);
         this.setLocationRelativeTo(null);
-        this.setLayout(new FlowLayout ());
+        this.setLayout(new FlowLayout());
+        this.con1 = new Container();
+        this.con1.setLayout(new GridLayout(1, 3));
 
         this.c = c;
         this.lp = lp;
@@ -47,9 +50,10 @@ public class View extends JFrame{
 
         this.add(this.lp);
         this.add(this.rp);
-        this.add(this.bsp);
-        this.add(this.ep);
-        this.add(this.pp);
+        this.con1.add(this.ep);
+        this.con1.add(this.bsp);
+        this.con1.add(this.pp);
+        this.add(con1);
 
 
         this.rp.setVisible(false);
@@ -64,36 +68,38 @@ public class View extends JFrame{
         this.lp.setVisible(false);*/
 
 
-
         this.setVisible(true);
     }
 
-    public void changeLogin(){
+    public void changeLogin() {
         this.lp.setVisible(false);
         this.pp.setVisible(true);
         this.ep.setVisible(true);
         this.bsp.setVisible(true);
         this.repaint();
     }
-    public void changeRegistrierung(){
+
+    public void changeRegistrierung() {
         this.lp.setVisible(false);
         this.rp.setVisible(true);
         this.repaint();
     }
 
-    public void changeLoginReg(){
+    public void changeLoginReg() {
         this.rp.setVisible(false);
         this.pp.setVisible(true);
         this.ep.setVisible(true);
         this.bsp.setVisible(true);
         this.repaint();
     }
-    public void zurueckReg(){
+
+    public void zurueckReg() {
         this.rp.setVisible(false);
         this.lp.setVisible(true);
         this.repaint();
     }
-    public void abmelden(){
+
+    public void abmelden() {
         this.pp.setVisible(false);
         this.ep.setVisible(false);
         this.bsp.setVisible(false);
