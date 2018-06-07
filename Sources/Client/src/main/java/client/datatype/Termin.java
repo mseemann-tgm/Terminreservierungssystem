@@ -1,5 +1,7 @@
 package  client.datatype;
 
+import java.util.Date;
+
 public class Termin {
 
 	private Date zeitpunkt;

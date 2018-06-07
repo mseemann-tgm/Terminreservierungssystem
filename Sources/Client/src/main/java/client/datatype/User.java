@@ -1,18 +1,24 @@
 package client.datatype;
 
 
+import java.util.ArrayList;
+
 public class User {
 
 	private String username;
 
 	private String passwort;
 
-	private Rolle[] rolle;
+	private ArrayList<Rolle> rolle;
 
-	public User(String username, String passwort, Rolle [] rolle){
+	public User(String username, String passwort, ArrayList <Rolle> rolle){
 	    this.username = username;
         this.passwort = passwort;
-        this.rolle = rolle;
+		if(rolle == null){
+			this.rolle = new ArrayList<Rolle>();
+		}else{
+        	this.rolle = rolle;
+		}
 	}
 
 	public void setUsername(String username) {
@@ -23,7 +29,7 @@ public class User {
 		this.passwort = passwort;
 	}
 
-	public void setRolle(Rolle[] rolle) {
+	public void setRolle(ArrayList<Rolle> rolle) {
 		this.rolle = rolle;
 	}
 
@@ -35,7 +41,7 @@ public class User {
 		return passwort;
 	}
 
-	public Rolle[] getRolle() {
+	public ArrayList<Rolle> getRolle() {
 		return rolle;
 	}
 }

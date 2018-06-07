@@ -20,7 +20,6 @@ public class RegistrierCommand implements Command {
 		this.rp = rp;
 		this.v = v;
 		this.datao = new DataObjectMockImp();
-		this.datao.register(this.benutzer);
 	}
 	/**
 	 * @see Command#execute()
@@ -28,7 +27,13 @@ public class RegistrierCommand implements Command {
 	 *  
 	 */
 	public void execute() {
-		this.v.changeLoginReg();
+		boolean loginOk = this.datao.register(this.benutzer);
+		if(loginOk == true) {
+			this.v.changeLoginReg();
+		}else{
+			System.out.println("Kein User vorhanden");
+		}
+
 	}
 
 }

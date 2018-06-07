@@ -22,6 +22,7 @@ public class View extends JFrame {
     private BenutzerSuchenPanel bsp;
     private EventPanel ep;
     private ProfilPanel pp;
+    private EventErstellenPanel eep;
     private Container con1;
 
 
@@ -31,7 +32,7 @@ public class View extends JFrame {
      * @param c Controller
      */
 
-    public View(Controller c, LoginPanel lp, RegistrierungPanel rp, BenutzerSuchenPanel bsp, EventPanel ep, ProfilPanel pp) {
+    public View(Controller c, LoginPanel lp, RegistrierungPanel rp, BenutzerSuchenPanel bsp, EventPanel ep, ProfilPanel pp, EventErstellenPanel eep) {
 
         this.setTitle("Terminreservierungssystem");
         this.setSize(800, 500);
@@ -47,9 +48,11 @@ public class View extends JFrame {
         this.bsp = bsp;
         this.ep = ep;
         this.pp = pp;
+        this.eep = eep;
 
         this.add(this.lp);
         this.add(this.rp);
+        this.add(this.eep);
         this.con1.add(this.ep);
         this.con1.add(this.bsp);
         this.con1.add(this.pp);
@@ -60,6 +63,7 @@ public class View extends JFrame {
         this.bsp.setVisible(false);
         this.ep.setVisible(false);
         this.pp.setVisible(false);
+        this.eep.setVisible(false);
         /*//Test für mseemann
         this.rp.setVisible(true);
         this.pp.setVisible(false);
@@ -104,6 +108,22 @@ public class View extends JFrame {
         this.ep.setVisible(false);
         this.bsp.setVisible(false);
         this.lp.setVisible(true);
+        this.repaint();
+    }
+
+    public void eventErstellen() {
+        this.pp.setVisible(false);
+        this.ep.setVisible(false);
+        this.bsp.setVisible(false);
+        this.eep.setVisible(true);
+        this.repaint();
+    }
+
+    public void zurueckEventErstellen() {
+        this.eep.setVisible(false);
+        this.pp.setVisible(true);
+        this.ep.setVisible(true);
+        this.bsp.setVisible(true);
         this.repaint();
     }
 

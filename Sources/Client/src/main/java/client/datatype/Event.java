@@ -1,16 +1,18 @@
 package  client.datatype;
 
+import java.util.ArrayList;
+
 public class Event {
 
 	private String name;
 
-	private Rolle[] rolle;
+	private ArrayList<Rolle> rolle;
 
-	private Termin[] termin;
+	private ArrayList<Termin> termin;
 
-	private Kommentar[] kommentar;
+	private ArrayList<Kommentar> kommentar;
 
-	public Event(String name, Rolle[] rolle, Termin[] termin, Kommentar[] kommentar) {
+	public Event(String name, ArrayList<Rolle> rolle, ArrayList<Termin> termin, ArrayList<Kommentar> kommentar) {
 		this.name = name;
 		this.rolle = rolle;
 		this.termin = termin;
@@ -25,27 +27,27 @@ public class Event {
 		this.name = name;
 	}
 
-	public Rolle[] getRolle() {
+	public ArrayList<Rolle> getRolle() {
 		return rolle;
 	}
 
-	public void setRolle(Rolle[] rolle) {
+	public void setRolle(ArrayList<Rolle> rolle) {
 		this.rolle = rolle;
 	}
 
-	public Termin[] getTermin() {
+	public ArrayList<Termin> getTermin() {
 		return termin;
 	}
 
-	public void setTermin(Termin[] termin) {
+	public void setTermin(ArrayList<Termin> termin) {
 		this.termin = termin;
 	}
 
-	public Kommentar[] getKommentar() {
+	public ArrayList<Kommentar> getKommentar() {
 		return kommentar;
 	}
 
-	public void setKommentar(Kommentar[] kommentar) {
+	public void setKommentar(ArrayList<Kommentar> kommentar) {
 		this.kommentar = kommentar;
 	}
 }
