@@ -1,0 +1,2 @@
+# Server Dokumentation
+## Benutzte Technologien
