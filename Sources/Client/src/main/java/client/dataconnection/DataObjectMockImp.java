@@ -1,15 +1,19 @@
 package client.dataconnection;
 
-import client.datatype.Benutzer;
+import client.datatype.Termin;
+import client.datatype.User;
+
+import java.util.List;
 
 public class DataObjectMockImp implements DataObject {
     @Override
-    public void register(String username, String password) {
-
+    public void register(User user) {
+        System.out.println(user.getUsername());
+        System.out.println(user.getPasswort());
     }
 
     @Override
-    public void login(Benutzer user) {
+    public void login(User user) {
         System.out.println(user.getUsername());
         System.out.println(user.getPasswort());
     }
@@ -42,5 +46,10 @@ public class DataObjectMockImp implements DataObject {
     @Override
     public void terminAbstimmen(String eventName, int terminID) {
 
+    }
+
+    @Override
+    public List<Termin> getTerminForUser(String Username){
+        return null;
     }
 }
