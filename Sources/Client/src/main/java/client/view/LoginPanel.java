@@ -19,7 +19,7 @@ public class LoginPanel extends JPanel {
 
     public LoginPanel(Controller c){
         this.c = c;
-        this.setLayout(new GridLayout(3, 2));
+        this.setLayout(new BorderLayout());
         this.benutzerText = new JLabel();
         this.passwortText = new JLabel();
         this.benutzerEingabe = new JTextField();
@@ -61,9 +61,9 @@ public class LoginPanel extends JPanel {
 
         this.beautifulB(registrierungButton, "Registrieren", con2);
         //South End
-
-        this.add(con1);
-        this.add(con2);
+        
+        this.add(con1, BorderLayout.CENTER);
+        this.add(con2, BorderLayout.SOUTH);
 
         this.eingabeButton.addActionListener(this.c);
         this.registrierungButton.addActionListener(this.c);
