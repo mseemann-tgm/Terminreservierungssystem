@@ -61,7 +61,7 @@ public class LoginPanel extends JPanel {
 
         this.beautifulB(registrierungButton, "Registrieren", con2);
         //South End
-        
+
         this.add(con1, BorderLayout.CENTER);
         this.add(con2, BorderLayout.SOUTH);
 
@@ -80,7 +80,7 @@ public class LoginPanel extends JPanel {
 
     private void beautifulB(JButton b, String text, Container con){
         b.setText(text);
-        b.setFont(new Font(b.getFont().getName(), 0, 15));
+        b.setFont(new Font(b.getFont().getName(), 0, 25));
         //b.setBackground(new Color(0, 50, 0));
         b.setOpaque(true);
         b.setForeground(new Color(0, 50, 0));
@@ -90,7 +90,7 @@ public class LoginPanel extends JPanel {
 
 
     private void beautifulTF(JTextField tf){
-        tf.setFont(new Font(tf.getFont().getName(), 0, 15));
+        tf.setFont(new Font(tf.getFont().getName(), 0, 25));
         tf.setBackground(new Color(0, 50, 0));
         tf.setOpaque(true);
         tf.setForeground(Color.lightGray);
@@ -98,7 +98,7 @@ public class LoginPanel extends JPanel {
     }
 
     private void beautifulTF(JTextField tf, String cord){
-        tf.setFont(new Font(tf.getFont().getName(), 0, 15));
+        tf.setFont(new Font(tf.getFont().getName(), 0, 25));
         tf.setBackground(new Color(0, 50, 0));
         tf.setOpaque(true);
         tf.setForeground(Color.lightGray);
@@ -106,7 +106,7 @@ public class LoginPanel extends JPanel {
     }
 
     private void beautifulTF(JTextField tf, Container con){
-        tf.setFont(new Font(tf.getFont().getName(), 0, 15));
+        tf.setFont(new Font(tf.getFont().getName(), 0, 25));
         tf.setBackground(new Color(0, 50, 0));
         tf.setOpaque(true);
         tf.setForeground(Color.white);
@@ -117,7 +117,7 @@ public class LoginPanel extends JPanel {
 
     private void beautifulL(JLabel l, String text){
         l.setText(text);
-        l.setFont(new Font(l.getFont().getName(), 1, 20));
+        l.setFont(new Font(l.getFont().getName(), 1, 30));
         l.setBackground(new Color(0, 50, 0));
         l.setOpaque(true);
         l.setForeground(Color.lightGray);
@@ -128,7 +128,7 @@ public class LoginPanel extends JPanel {
 
     private void beautifulL(JLabel l, String text, Container con){
         l.setText(text);
-        l.setFont(new Font(l.getFont().getName(), 1, 20));
+        l.setFont(new Font(l.getFont().getName(), 1, 30));
         l.setBackground(new Color(0, 50, 0));
         l.setOpaque(true);
         l.setForeground(Color.white);
@@ -140,7 +140,7 @@ public class LoginPanel extends JPanel {
 
     private void beautifulL(JLabel l, String text, String cord){
         l.setText(text);
-        l.setFont(new Font(l.getFont().getName(), 1, 20));
+        l.setFont(new Font(l.getFont().getName(), 1, 30));
         l.setBackground(new Color(0, 50, 0));
         l.setOpaque(true);
         l.setForeground(Color.white);
