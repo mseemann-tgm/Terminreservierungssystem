@@ -9,7 +9,7 @@ public class EventPanel extends JPanel {
 
     public EventPanel(){
         String [] events = {"Keine Events"};
-        this.setLayout(new FlowLayout());
+        this.setLayout(new BorderLayout());
         this.eventListe = new JList(events);
         this.eventListeScroll = new JScrollPane(this.eventListe);
         this.eventListeScroll.setPreferredSize(new Dimension(250, 80));

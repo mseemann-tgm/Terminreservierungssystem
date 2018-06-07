@@ -33,7 +33,7 @@ public class View extends JFrame{
     public View(Controller c, LoginPanel lp, RegistrierungPanel rp, BenutzerSuchenPanel bsp, EventPanel ep, ProfilPanel pp){
 
         this.setTitle("Terminreservierungssystem");
-        this.setSize(1000, 500);
+        this.setSize(700, 500);
         this.setDefaultCloseOperation(3);
         this.setLocationRelativeTo(null);
         this.setLayout(new FlowLayout ());
@@ -47,9 +47,9 @@ public class View extends JFrame{
 
         this.add(this.lp);
         this.add(this.rp);
-        this.add(this.pp);
-        this.add(this.ep);
         this.add(this.bsp);
+        this.add(this.ep);
+        this.add(this.pp);
 
 
         this.rp.setVisible(false);
