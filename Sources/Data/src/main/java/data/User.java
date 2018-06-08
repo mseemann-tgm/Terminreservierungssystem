@@ -20,6 +20,14 @@ public class User {
 	@OneToMany(mappedBy = "user")
 	private List<Rolle> rolle;
 
+	public User(){}
+
+	public User (String name, String passwort, List<Rolle> rolle){
+		this.name = name;
+		this.passwort = passwort;
+		this.rolle = rolle;
+	}
+
 	public String getName() {
 		return name;
 	}

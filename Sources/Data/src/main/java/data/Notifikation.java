@@ -1,6 +1,8 @@
 package data;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Notifikation {
@@ -14,6 +16,13 @@ public class Notifikation {
 	@ManyToOne
 	@JoinColumn(name="rolle_id")
 	private Rolle rolle;
+
+	public Notifikation(){}
+
+	public Notifikation(String text, Rolle rolle){
+		this.text = text;
+		this.rolle = rolle;
+	}
 
 	public int getId() {
 		return id;

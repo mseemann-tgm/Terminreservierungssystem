@@ -4,8 +4,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-public enum Rolle {
-	TEILNEHMER, ORGANISATOR;
+public class Rolle {
 
 	@OneToMany(mappedBy = "rolle", cascade = CascadeType.ALL)
 	private List<Notifikation> notifikation;
@@ -14,7 +13,11 @@ public enum Rolle {
 	@GeneratedValue
 	private int id;
 
+	@Enumerated(EnumType.STRING)
+	private RollenTyp rollenTyp;
+
 	@ManyToOne
+	@JoinColumn(name="termin_id")
 	private Termin auswahl;
 
 	@ManyToOne
@@ -27,6 +30,16 @@ public enum Rolle {
 
 	public List<Notifikation> getNotifikation() {
 		return notifikation;
+	}
+
+	public Rolle(){}
+
+	public Rolle(List<Notifikation> notifikation, RollenTyp rollenTyp, Termin auswahl, Event event, User user){
+		this.notifikation = notifikation;
+		this.rollenTyp = rollenTyp;
+		this.auswahl = auswahl;
+		this.event = event;
+		this.user = user;
 	}
 
 	public void setNotifikation(List<Notifikation> notifikation) {
