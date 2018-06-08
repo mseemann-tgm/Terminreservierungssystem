@@ -10,6 +10,7 @@ public class Termin {
     private Date zeitpunkt;
 
     @Id
+    @GeneratedValue
     private int ID;
 
     @ManyToOne
@@ -19,8 +20,8 @@ public class Termin {
     public Termin() {
     }
 
-    public Termin(int ID) {
-        this.ID = ID;
+    public Termin(Date zeitpunkt) {
+        this.zeitpunkt = zeitpunkt;
     }
 
     public Event getEvent() {

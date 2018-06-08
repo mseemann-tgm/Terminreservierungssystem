@@ -10,16 +10,20 @@ import org.junit.*;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class DataTests{
-
+    private static EntityManagerFactory session;
     private static EntityManager em;
+    private Event event;
+    private Kommentar kommentar;
 
-    private void clearDatabase(){
+    private static void clearDatabase(){
         em.getTransaction().begin();
-        em.createQuery("DELETE FROM Event").executeUpdate();
         em.createQuery("DELETE FROM Kommentar").executeUpdate();
+        em.createQuery("DELETE FROM Event").executeUpdate();
         em.createQuery("DELETE FROM Notifikation").executeUpdate();
         em.createQuery("DELETE FROM Rolle").executeUpdate();
         em.createQuery("DELETE FROM Termin").executeUpdate();
@@ -27,38 +31,57 @@ public class DataTests{
         em.getTransaction().commit();
     }
 
+    @BeforeClass
+    public static void setUp() throws Exception {
+        session = Persistence.createEntityManagerFactory("Data");
+        em = session.createEntityManager();
+        //Vor dem Testen die Datenbank sicherheitshalber leeren
+        clearDatabase();
+    }
     @Before
-    public void setUp() throws Exception {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("Data");
-        em = emf.createEntityManager();
+    public void init(){
+        ArrayList<Rolle> rolle = new ArrayList<Rolle>();
+        rolle.add(Rolle.TEILNEHMER);
+        ArrayList<Termin> termin = new ArrayList<Termin>();
+        Date datum = new Date();
+        datum.getTime();
+        termin.add(new Termin(datum));
+        ArrayList<Kommentar> kommentar = new ArrayList<Kommentar>();
+        //kommentar.add()
+
+        this.event = new Event("event1", rolle, termin,new ArrayList<Kommentar>());
+
+        this.kommentar = new Kommentar(this.event, "Ein Kommentar");
+
+        em.persist(this.kommentar);
+        em.persist(this.event);
+    }
+    @After
+    public void tearDown() throws Exception {
+        //Nach dem Testen die Datenbank sicherheitshalber leeren
         clearDatabase();
     }
 
-    @After
-    public void tearDown() throws Exception {
-        clearDatabase();
-        em.close();
+
+    @Test
+    public void testEvent() {
+        assertTrue(em.contains(this.event));
     }
 
     @Test
-    public void testTest(){
-        em.getTransaction().begin();
-        Termin t = new Termin(3);
-        t.setID(3);
-        em.persist(t);
-        em.getTransaction().commit();
-        assertTrue(true);
+    public void testKommentar(){
+        assertTrue(em.contains(this.kommentar));
     }
 
     @Test
     public void testJPQL(){
-        em.getTransaction().begin();
+        /*em.getTransaction().begin();
         Termin t = new Termin(2);
         t.setID(1);
         em.persist(t);
         em.getTransaction().commit();
         List<Termin> l = (List<Termin>)em.createQuery("SELECT t FROM Termin t").getResultList();
-        assertTrue(l.size()>0);
+        assertTrue(l.size()>0);*/
     }
 
 }

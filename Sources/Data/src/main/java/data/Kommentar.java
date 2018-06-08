@@ -1,15 +1,13 @@
 package data;
 
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
 public class Kommentar {
 
     @Id
+    @GeneratedValue
 	private int ID;
 
     @ManyToOne
@@ -17,6 +15,13 @@ public class Kommentar {
 	private Event event;
 
 	private String text;
+
+	public Kommentar(){}
+
+	public Kommentar(Event event, String text){
+	    this.event = event;
+	    this.text = text;
+    }
 
     public int getID() {
         return ID;

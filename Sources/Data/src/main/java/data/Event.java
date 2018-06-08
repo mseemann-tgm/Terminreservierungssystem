@@ -8,6 +8,9 @@ import java.util.Map;
 public class Event {
 
 	@Id
+	@GeneratedValue
+	int ID = 0;
+
 	private String name;
 
 	@OneToMany(mappedBy = "event", cascade = CascadeType.ALL)
@@ -18,6 +21,15 @@ public class Event {
 
     @OneToMany(mappedBy = "event", cascade = CascadeType.ALL)
 	private List<Kommentar> kommentar;
+
+	public Event(){}
+
+	public Event(String name, List<Rolle> rolle, List<Termin> termin, List<Kommentar>kommentar){
+		this.name = name;
+		this.rolle = rolle;
+		this.termin = termin;
+		this.kommentar = kommentar;
+	}
 
 	public String getName() {
 		return name;
