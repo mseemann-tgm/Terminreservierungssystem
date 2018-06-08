@@ -21,13 +21,17 @@ public class EventPanel extends JPanel {
         this.setLayout(new BorderLayout());
         this.eventListe = new JList(events);
         this.eventListeScroll = new JScrollPane(this.eventListe);
-        this.eventHinzu = new JButton("Event hinzufügen");
+        this.eventHinzu = new JButton();
         this.beautifulList(eventListe);
+        this.beautifulB(eventHinzu, "Event hinzufügen");
+
+
         this.eventListeScroll.setPreferredSize(new Dimension(150, 200));
+
         this.c = c;
 
-        this.add(this.eventListeScroll, BorderLayout.CENTER);
         this.add(this.eventHinzu,BorderLayout.NORTH);
+        this.add(this.eventListeScroll, BorderLayout.CENTER);
 
         this.eventHinzu.addActionListener(c);
     }
@@ -47,4 +51,14 @@ public class EventPanel extends JPanel {
         l.setForeground(Color.white);
         l.setBorder(new CompoundBorder(border, border2));
     }
+
+    private void beautifulB(JButton b, String text) {
+        b.setText(text);
+        b.setFont(new Font(b.getFont().getName(), 0, 25));
+        //b.setBackground(new Color(0, 50, 0));
+        b.setOpaque(true);
+        b.setForeground(new Color(0, 50, 0));
+        b.setBorder(new CompoundBorder(border, border2));
+    }
+
 }
