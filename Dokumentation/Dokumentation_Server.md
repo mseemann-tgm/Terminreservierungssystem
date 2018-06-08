@@ -21,6 +21,8 @@ Auch die Speicherung der SessionTolkens, also der Anmeldung, soll von dem Server
 Siehe Astah: [/Design](./../Design)
 
 ## Ausführen
+Um die Daten zu persistieren, braucht man eine Datenbank (MySQL). 
+Die Daten dieser muss man in `persistence.xml` eingetragen sein.
 Duch Maven kann man das Projekt auf folgende weise kompeliert werden:
 ```
 mvn package
