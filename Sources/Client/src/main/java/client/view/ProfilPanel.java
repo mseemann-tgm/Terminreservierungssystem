@@ -39,11 +39,22 @@ public class ProfilPanel extends JPanel {
         this.abmeldenButton.addActionListener(c);
     }
 
+    /**
+     * @param b
+     * @return true or false, true wenn gedrückt, false sonst immer
+     */
     public boolean abmeldenButtonGedrueckt(Object b) {
         if (b == this.abmeldenButton) return true;
         return false;
     }
 
+    /**
+     * Die Methode setzt die Eigenschaften des gegebenen Buttons,
+     * also die Farbe, Schrift und Ränder
+     *
+     * @param b
+     * @param text
+     */
     private void beautifulB(JButton b, String text) {
         b.setText(text);
         b.setFont(new Font(b.getFont().getName(), 0, 25));

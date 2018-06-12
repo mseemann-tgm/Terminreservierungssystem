@@ -60,8 +60,6 @@ public class BenutzerSuchenPanel extends JPanel {
         this.add(con2);
 
         this.benutzerEingabeButton.addActionListener(c);
-
-
     }
 
     /**
@@ -71,10 +69,6 @@ public class BenutzerSuchenPanel extends JPanel {
     public boolean benutzerEingabeButtonGedrueckt(Object b) {
         if (b == this.benutzerEingabeButton) return true;
         return false;
-    }
-
-    public String getBenutzerEingabe() {
-        return this.benutzerEingabe.getText();
     }
 
     public void setBenutzerListe(String[] benutzerGesucht) {
@@ -142,4 +136,12 @@ public class BenutzerSuchenPanel extends JPanel {
         l.setForeground(Color.white);
         l.setBorder(new CompoundBorder(border, border2));
     }
+
+    /**
+     * GETTER
+     */
+    public String getBenutzerEingabe() {
+        return this.benutzerEingabe.getText();
+    }
+
 }

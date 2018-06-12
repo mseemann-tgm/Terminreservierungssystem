@@ -138,7 +138,6 @@ public class EventErstellenPanel extends JPanel {
         con.add(tf);
     }
 
-
     /**
      * Die Methode setzt die Eigenschaften des gegebenen Labels,
      * also die Farbe, Schrift und Ränder
@@ -177,6 +176,9 @@ public class EventErstellenPanel extends JPanel {
         l.setHorizontalAlignment(SwingConstants.CENTER);
     }
 
+    /**
+     * GETTER
+     */
     public String getNameEingabe() {
         return nameEingabe.getText();
     }

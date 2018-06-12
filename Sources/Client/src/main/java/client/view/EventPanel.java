@@ -52,10 +52,6 @@ public class EventPanel extends JPanel {
         return false;
     }
 
-    public void setEventListe(String[] events) {
-        this.eventListe.setListData(events);
-    }
-
     /**
      * Die Methode setzt die Eigenschaften der gegebenen Liste,
      * also die Farbe, Schrift und Ränder
@@ -86,4 +82,10 @@ public class EventPanel extends JPanel {
         b.setBorder(new CompoundBorder(border, border2));
     }
 
+    /**
+     * SETTER
+     */
+    public void setEventListe(String[] events) {
+        this.eventListe.setListData(events);
+    }
 }
