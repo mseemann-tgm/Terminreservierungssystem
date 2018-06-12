@@ -25,6 +25,11 @@ public class EventErstellenPanel extends JPanel {
     private static final Border border2 = new EmptyBorder(10, 10, 10, 10);
 
 
+    /**
+     * Der Konstruktor des Eventerstellenpanels
+     *
+     * @param c
+     */
     public EventErstellenPanel(Controller c) {
         this.c = c;
         this.setLayout(new GridLayout(4, 1));

@@ -28,6 +28,11 @@ public class BenutzerSuchenPanel extends JPanel {
     private static final Border border = BorderFactory.createLineBorder(new Color(0, 150, 0), 3);
     private static final Border border2 = new EmptyBorder(10, 10, 10, 10);
 
+    /**
+     * Der Konstruktor des Benutzersuchenpanels
+     *
+     * @param c
+     */
     public BenutzerSuchenPanel(Controller c) {
         this.c = c;
         this.setLayout(new BorderLayout());
