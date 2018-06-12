@@ -31,7 +31,6 @@ public class View extends JFrame {
      *
      * @param c Controller
      */
-
     public View(Controller c, LoginPanel lp, RegistrierungPanel rp, BenutzerSuchenPanel bsp, EventPanel ep, ProfilPanel pp, EventErstellenPanel eep) {
 
         this.setTitle("Terminreservierungssystem");
@@ -75,6 +74,10 @@ public class View extends JFrame {
         this.setVisible(true);
     }
 
+
+    /**
+     *  Die Switch-Methoden für die einzelnen Panels
+     */
     public void changeLogin() {
         this.lp.setVisible(false);
         this.pp.setVisible(true);

@@ -8,6 +8,13 @@ import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
+/**
+ * Die Klasse EventErstellenPanel erzeugt das Eventerstellenpanel.
+ *
+ * @author SEEMANN Manuel, BURIAN Paul
+ * @version 2018-06-12
+ */
+
 public class EventErstellenPanel extends JPanel {
     private Controller c;
     private JLabel name, rolle, termin, kommentar, main;
@@ -18,6 +25,11 @@ public class EventErstellenPanel extends JPanel {
     private static final Border border2 = new EmptyBorder(10, 10, 10, 10);
 
 
+    /**
+     * Der Konstruktor des Eventerstellenpanels
+     *
+     * @param c
+     */
     public EventErstellenPanel(Controller c) {
         this.c = c;
         this.setLayout(new GridLayout(4, 1));
@@ -32,20 +44,6 @@ public class EventErstellenPanel extends JPanel {
         this.kommentarEingabe = new JTextField();
         this.zurueck = new JButton();
         this.erstellen = new JButton();
-
-
-        /*
-        this.add(this.name);
-        this.add(this.nameEingabe);
-        this.add(this.rolle);
-        this.add(this.rolleEingabe);
-        this.add(this.termin);
-        this.add(this.terminEinagbe);
-        this.add(this.kommentar);
-        this.add(this.kommentarEingabe);
-        this.add(this.zurueck);
-        this.add(this.erstellen);
-        */
 
 
         //North Start
@@ -93,16 +91,32 @@ public class EventErstellenPanel extends JPanel {
 
     }
 
+    /**
+     * @param b
+     * @return true or false, true wenn gedrückt, false sonst immer
+     */
     public boolean zurueckGedrueckt(Object b) {
         if (b == this.zurueck) return true;
         return false;
     }
 
+    /**
+     * @param b
+     * @return true or false, true wenn gedrückt, false sonst immer
+     */
     public boolean erstellenGedrueckt(Object b) {
         if (b == this.erstellen) return true;
         return false;
     }
 
+    /**
+     * Die Methode setzt die Eigenschaften des gegebenen Buttons,
+     * also die Farbe, Schrift, Ränder und setzt es in einen Container
+     *
+     * @param b
+     * @param text
+     * @param con
+     */
     private void beautifulB(JButton b, String text, Container con) {
         b.setText(text);
         b.setFont(new Font(b.getFont().getName(), 0, 25));
@@ -113,7 +127,13 @@ public class EventErstellenPanel extends JPanel {
         con.add(b);
     }
 
-
+    /**
+     * Die Methode setzt die Eigenschaften des gegebenen Textfields,
+     * also die Farbe, Schrift, Ränder und setzt es in einen Container
+     *
+     * @param tf
+     * @param con
+     */
     private void beautifulTF(JTextField tf, Container con) {
         tf.setFont(new Font(tf.getFont().getName(), 0, 20));
         tf.setBackground(new Color(0, 50, 0));
@@ -123,7 +143,14 @@ public class EventErstellenPanel extends JPanel {
         con.add(tf);
     }
 
-
+    /**
+     * Die Methode setzt die Eigenschaften des gegebenen Labels,
+     * also die Farbe, Schrift und Ränder
+     *
+     * @param l
+     * @param text
+     * @param con
+     */
     private void beautifulL(JLabel l, String text, Container con) {
         l.setText(text);
         l.setFont(new Font(l.getFont().getName(), 1, 25));
@@ -136,6 +163,13 @@ public class EventErstellenPanel extends JPanel {
         con.add(l);
     }
 
+    /**
+     * Die Methode setzt die Eigenschaften des gegebenen Labels,
+     * also die Farbe, Schrift und Ränder
+     *
+     * @param l
+     * @param text
+     */
     private void beautifulL(JLabel l, String text) {
         l.setText(text);
         l.setFont(new Font(l.getFont().getName(), 1, 25));
@@ -147,6 +181,9 @@ public class EventErstellenPanel extends JPanel {
         l.setHorizontalAlignment(SwingConstants.CENTER);
     }
 
+    /**
+     * GETTER
+     */
     public String getNameEingabe() {
         return nameEingabe.getText();
     }

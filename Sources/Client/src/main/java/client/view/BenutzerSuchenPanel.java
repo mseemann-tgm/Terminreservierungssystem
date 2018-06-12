@@ -9,6 +9,13 @@ import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.util.ArrayList;
 
+/**
+ * Die Klasse BenutzerSuchenPanel erzeugt das Benutzersuchenpanel.
+ *
+ * @author SEEMANN Manuel, BURIAN Paul
+ * @version 2018-06-12
+ */
+
 public class BenutzerSuchenPanel extends JPanel {
     private Controller c;
     private JLabel benutzerEingabeText;
@@ -21,6 +28,11 @@ public class BenutzerSuchenPanel extends JPanel {
     private static final Border border = BorderFactory.createLineBorder(new Color(0, 150, 0), 3);
     private static final Border border2 = new EmptyBorder(10, 10, 10, 10);
 
+    /**
+     * Der Konstruktor des Benutzersuchenpanels
+     *
+     * @param c
+     */
     public BenutzerSuchenPanel(Controller c) {
         this.c = c;
         this.setLayout(new BorderLayout());
@@ -53,23 +65,28 @@ public class BenutzerSuchenPanel extends JPanel {
         this.add(con2);
 
         this.benutzerEingabeButton.addActionListener(c);
-
-
     }
 
+    /**
+     * @param b
+     * @return true or false, true wenn gedrückt, false sonst immer
+     */
     public boolean benutzerEingabeButtonGedrueckt(Object b) {
         if (b == this.benutzerEingabeButton) return true;
         return false;
-    }
-
-    public String getBenutzerEingabe() {
-        return this.benutzerEingabe.getText();
     }
 
     public void setBenutzerListe(String[] benutzerGesucht) {
         this.benutzerListe.setListData(benutzerGesucht);
     }
 
+    /**
+     * Die Methode setzt die Eigenschaften des gegebenen Buttons,
+     * also die Farbe, Schrift und Ränder
+     *
+     * @param b
+     * @param text
+     */
     private void beautifulB(JButton b, String text) {
         b.setText(text);
         b.setFont(new Font(b.getFont().getName(), 0, 25));
@@ -79,6 +96,12 @@ public class BenutzerSuchenPanel extends JPanel {
         b.setBorder(new CompoundBorder(border, border2));
     }
 
+    /**
+     * Die Methode setzt die Eigenschaften des gegebenen Textfields,
+     * also die Farbe, Schrift und Ränder
+     *
+     * @param tf
+     */
     private void beautifulTF(JTextField tf) {
         tf.setFont(new Font(tf.getFont().getName(), 0, 25));
         tf.setBackground(new Color(0, 50, 0));
@@ -87,6 +110,13 @@ public class BenutzerSuchenPanel extends JPanel {
         tf.setBorder(new CompoundBorder(border, border2));
     }
 
+    /**
+     * Die Methode setzt die Eigenschaften des gegebenen Labels,
+     * also die Farbe, Schrift und Ränder
+     *
+     * @param l
+     * @param text
+     */
     private void beautifulL(JLabel l, String text) {
         l.setText(text);
         l.setFont(new Font(l.getFont().getName(), 1, 30));
@@ -98,6 +128,12 @@ public class BenutzerSuchenPanel extends JPanel {
         l.setHorizontalAlignment(SwingConstants.CENTER);
     }
 
+    /**
+     * Die Methode setzt die Eigenschaften der gegebenen Liste,
+     * also die Farbe, Schrift und Ränder
+     *
+     * @param l
+     */
     private void beautifulList(JList l) {
         l.setFont(new Font(l.getFont().getName(), 1, 20));
         l.setBackground(new Color(0, 50, 0));
@@ -105,4 +141,12 @@ public class BenutzerSuchenPanel extends JPanel {
         l.setForeground(Color.white);
         l.setBorder(new CompoundBorder(border, border2));
     }
+
+    /**
+     * GETTER
+     */
+    public String getBenutzerEingabe() {
+        return this.benutzerEingabe.getText();
+    }
+
 }

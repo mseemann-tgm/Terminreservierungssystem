@@ -8,6 +8,13 @@ import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
+/**
+ * Die Klasse LoginPanel erzeugt das Loginpanel.
+ *
+ * @author SEEMANN Manuel, BURIAN Paul
+ * @version 2018-06-12
+ */
+
 public class LoginPanel extends JPanel {
     private Controller c;
     private JLabel benutzerText, passwortText, main;
@@ -17,6 +24,11 @@ public class LoginPanel extends JPanel {
     private static final Border border = BorderFactory.createLineBorder(new Color(0, 150, 0), 3);
     private static final Border border2 = new EmptyBorder(10, 10, 10, 10);
 
+    /**
+     * Der Konstruktor des Loginpanels
+     *
+     * @param c
+     */
     public LoginPanel(Controller c) {
         this.c = c;
         this.setLayout(new GridLayout(4, 1));
@@ -26,15 +38,6 @@ public class LoginPanel extends JPanel {
         this.passwortEingabe = new JTextField();
         this.eingabeButton = new JButton();
         this.registrierungButton = new JButton();
-
-        /*
-        this.add(this.benutzerText);
-        this.add(this.benutzerEingabe);
-        this.add(this.passwortText);
-        this.add(this.passwortEingabe);
-        this.add(this.registrierungButton);
-        this.add(this.eingabeButton);
-        */
 
         //North Start
         this.main = new JLabel();
@@ -70,16 +73,32 @@ public class LoginPanel extends JPanel {
 
     }
 
+    /**
+     * @param b
+     * @return true or false, true wenn gedrückt, false sonst immer
+     */
     public boolean eingabeButtonGedrueckt(Object b) {
         if (b == this.eingabeButton) return true;
         return false;
     }
 
+    /**
+     * @param b
+     * @return true or false, true wenn gedrückt, false sonst immer
+     */
     public boolean registrierungButtonGedrueckt(Object b) {
         if (b == this.registrierungButton) return true;
         return false;
     }
 
+    /**
+     * Die Methode setzt die Eigenschaften des gegebenen Buttons,
+     * also die Farbe, Schrift und Ränder
+     *
+     * @param b
+     * @param text
+     * @param con
+     */
     private void beautifulB(JButton b, String text, Container con) {
         b.setText(text);
         b.setFont(new Font(b.getFont().getName(), 0, 25));
@@ -90,7 +109,13 @@ public class LoginPanel extends JPanel {
         con.add(b);
     }
 
-
+    /**
+     * Die Methode setzt die Eigenschaften des gegebenen Textfields,
+     * also die Farbe, Schrift und Ränder
+     *
+     * @param tf
+     * @param con
+     */
     private void beautifulTF(JTextField tf, Container con) {
         tf.setFont(new Font(tf.getFont().getName(), 0, 25));
         tf.setBackground(new Color(0, 50, 0));
@@ -100,7 +125,14 @@ public class LoginPanel extends JPanel {
         con.add(tf);
     }
 
-
+    /**
+     * Die Methode setzt die Eigenschaften des gegebenen Label,
+     * also die Farbe, Schrift und Ränder
+     *
+     * @param l
+     * @param text
+     * @param con
+     */
     private void beautifulL(JLabel l, String text, Container con) {
         l.setText(text);
         l.setFont(new Font(l.getFont().getName(), 1, 30));
@@ -113,6 +145,14 @@ public class LoginPanel extends JPanel {
         con.add(l);
     }
 
+    /**
+     * Die Methode setzt die Eigenschaften des gegebenen Buttons,
+     * also die Farbe, Schrift und Ränder
+     *
+     * @param l
+     * @param text
+     * @param cord
+     */
     private void beautifulL(JLabel l, String text, String cord) {
         l.setText(text);
         l.setFont(new Font(l.getFont().getName(), 1, 30));
@@ -125,6 +165,9 @@ public class LoginPanel extends JPanel {
         this.add(l, cord);
     }
 
+    /**
+     * GETTER
+     */
     public String getBenutzerEingabe() {
         return this.benutzerEingabe.getText();
     }
