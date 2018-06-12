@@ -21,6 +21,9 @@ public class MyRestController {
 
     /*
      * Server/greeting Function
+     * @param value = Wert der Übertragen wird.
+     * @param defaultValue = Wert der default gesetzt ist
+     * @return returnt das Greeting -> Greeting.java
      */
     @RequestMapping("/greeting")
     public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
@@ -32,6 +35,8 @@ public class MyRestController {
     }
     /*
      * Server/inc Function
+     * @param value = Wert der Übertragen wird.
+     * @param defaultValue = Wert der default gesetzt ist
      */
     @RequestMapping("/inc")
     public void inc(@RequestParam(value="name", defaultValue="World") String name) {
@@ -40,6 +45,7 @@ public class MyRestController {
     }
     /*
      * Server/incby Function
+     * @param gettet die ExampleDataClass
      */
     @PostMapping("/incby")
     public void update(@RequestBody ExampleDataClass w){
@@ -49,14 +55,18 @@ public class MyRestController {
     }
     /*
      * Server/User/login Function
+     * @param value = Wert der Übertragen wird.
+     * @param defaultValue = Wert der default gesetzt ist
      */
     @RequestMapping("/User/login")
-    public void login(@RequestParam(value = "name", defaultValue = "World") String username) {
-        System.out.println("login"+ username);
+    public void login(@RequestParam(value = "name", defaultValue = "World") String userkey) {
+        System.out.println("login"+ userkey);
 
     }
     /*
      * Server/User/register Function
+     * @param value = Wert der Übertragen wird.
+     * @param defaultValue = Wert der default gesetzt ist
      */
     @RequestMapping("/User/register")
     public void register(@RequestParam(value = "name", defaultValue = "World") String userkey) {
@@ -64,6 +74,7 @@ public class MyRestController {
     }
     /*
      * Server/Termin/choose Function
+     * @param userkey Der user der zugreift
      */
     @RequestMapping("/Termin/choose")
     public void chooseTermin(String userkey){
@@ -71,6 +82,7 @@ public class MyRestController {
     }
     /*
      * Server/User/search Function
+     * @param userkey Der user der zugreift
      */
     @RequestMapping("/User/search")
     public void searchUser(String userkey){
@@ -78,6 +90,7 @@ public class MyRestController {
     }
     /*
      * Server/Events/show Function
+     * @param userkey Der user der zugreift
      */
     @RequestMapping("/Events/show")
     public void showEvents(String userkey){
@@ -85,6 +98,7 @@ public class MyRestController {
     }
     /*
      * Server/Comment/delete Function
+     * @param userkey Der user der zugreift
      */
     @RequestMapping("/Comment/delete")
     public void deleteUser(String userkey){
@@ -92,6 +106,7 @@ public class MyRestController {
     }
     /*
      * Server/User/invite Function
+     * @param userkey Der user der zugreift
      */
     @RequestMapping("/User/invite")
     public void inviteUser(String userkey){
@@ -99,6 +114,7 @@ public class MyRestController {
     }
     /*
      * Server/User/invite/delete Function
+     * @param userkey Der user der zugreift
      */
     @RequestMapping("/User/invite/delete")
     public void deleteInvite(String userkey){
@@ -106,6 +122,7 @@ public class MyRestController {
     }
     /*
      * Server/Termin/set Function
+     * @param userkey Der user der zugreift
      */
     @RequestMapping("/Termin/set")
     public void setTermin(String userkey){
@@ -113,13 +130,15 @@ public class MyRestController {
     }
     /*
      * Server/Event/create Function
+     * @param userkey Der user der zugreift
      */
     @RequestMapping("/Event/create")
     public void createEvent(String userkey){
         System.out.println("createEvent by"+userkey);
     }
     /*
-     * Server/Event/change Function
+     * Server/Event/change
+     * @param userkey Der user der zugreift
      */
     @RequestMapping("/Event/change")
     public void changeEvent(String userkey){

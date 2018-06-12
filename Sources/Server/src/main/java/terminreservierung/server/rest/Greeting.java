@@ -10,6 +10,8 @@ public class Greeting {
 
     /*
      * Construc. gets id and content and sets it
+     * @param id used id
+     * @param content content to show
      */
     public Greeting(long id, String content) {
         this.id = id;
@@ -17,16 +19,14 @@ public class Greeting {
     }
     /*
      * getter for ID
-     *
-     * return id
+     * @return id
      */
     public long getId() {
         return id;
     }
     /*
      * getter for Content
-     *
-     * return content
+     * @return content
      */
     public String getContent() {
         return content;
