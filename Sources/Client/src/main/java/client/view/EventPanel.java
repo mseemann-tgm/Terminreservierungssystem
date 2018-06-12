@@ -8,6 +8,13 @@ import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
+/**
+ * Die Klasse EventPanel erzeugt das Eventpanel.
+ *
+ * @author SEEMANN Manuel, BURIAN Paul
+ * @version 2018-06-12
+ */
+
 public class EventPanel extends JPanel {
     private JList eventListe;
     private JScrollPane eventListeScroll;
@@ -30,12 +37,16 @@ public class EventPanel extends JPanel {
 
         this.c = c;
 
-        this.add(this.eventHinzu,BorderLayout.NORTH);
+        this.add(this.eventHinzu, BorderLayout.NORTH);
         this.add(this.eventListeScroll, BorderLayout.CENTER);
 
         this.eventHinzu.addActionListener(c);
     }
 
+    /**
+     * @param b
+     * @return true or false, true wenn gedrückt, false sonst immer
+     */
     public boolean eventHinzuGedrueckt(Object b) {
         if (b == this.eventHinzu) return true;
         return false;
@@ -44,6 +55,13 @@ public class EventPanel extends JPanel {
     public void setEventListe(String[] events) {
         this.eventListe.setListData(events);
     }
+
+    /**
+     * Die Methode setzt die Eigenschaften der gegebenen Liste,
+     * also die Farbe, Schrift und Ränder
+     *
+     * @param l
+     */
     private void beautifulList(JList l) {
         l.setFont(new Font(l.getFont().getName(), 1, 20));
         l.setBackground(new Color(0, 50, 0));
@@ -53,8 +71,8 @@ public class EventPanel extends JPanel {
     }
 
     /**
-     *  Die Methode setzt die Eigenschaften des gegebenen Buttons,
-     *  also die Farbe, Schrift und Ränder
+     * Die Methode setzt die Eigenschaften des gegebenen Buttons,
+     * also die Farbe, Schrift und Ränder
      *
      * @param b
      * @param text

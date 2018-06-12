@@ -8,6 +8,13 @@ import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
+/**
+ * Die Klasse EventErstellenPanel erzeugt das Eventerstellenpanel.
+ *
+ * @author SEEMANN Manuel, BURIAN Paul
+ * @version 2018-06-12
+ */
+
 public class EventErstellenPanel extends JPanel {
     private Controller c;
     private JLabel name, rolle, termin, kommentar, main;
@@ -32,20 +39,6 @@ public class EventErstellenPanel extends JPanel {
         this.kommentarEingabe = new JTextField();
         this.zurueck = new JButton();
         this.erstellen = new JButton();
-
-
-        /*
-        this.add(this.name);
-        this.add(this.nameEingabe);
-        this.add(this.rolle);
-        this.add(this.rolleEingabe);
-        this.add(this.termin);
-        this.add(this.terminEinagbe);
-        this.add(this.kommentar);
-        this.add(this.kommentarEingabe);
-        this.add(this.zurueck);
-        this.add(this.erstellen);
-        */
 
 
         //North Start
@@ -93,19 +86,27 @@ public class EventErstellenPanel extends JPanel {
 
     }
 
+    /**
+     * @param b
+     * @return true or false, true wenn gedrückt, false sonst immer
+     */
     public boolean zurueckGedrueckt(Object b) {
         if (b == this.zurueck) return true;
         return false;
     }
 
+    /**
+     * @param b
+     * @return true or false, true wenn gedrückt, false sonst immer
+     */
     public boolean erstellenGedrueckt(Object b) {
         if (b == this.erstellen) return true;
         return false;
     }
 
     /**
-     *  Die Methode setzt die Eigenschaften des gegebenen Buttons,
-     *  also die Farbe, Schrift, Ränder und setzt es in einen Container
+     * Die Methode setzt die Eigenschaften des gegebenen Buttons,
+     * also die Farbe, Schrift, Ränder und setzt es in einen Container
      *
      * @param b
      * @param text
@@ -122,8 +123,8 @@ public class EventErstellenPanel extends JPanel {
     }
 
     /**
-     *  Die Methode setzt die Eigenschaften des gegebenen Textfields,
-     *  also die Farbe, Schrift, Ränder und setzt es in einen Container
+     * Die Methode setzt die Eigenschaften des gegebenen Textfields,
+     * also die Farbe, Schrift, Ränder und setzt es in einen Container
      *
      * @param tf
      * @param con
@@ -139,8 +140,8 @@ public class EventErstellenPanel extends JPanel {
 
 
     /**
-     *  Die Methode setzt die Eigenschaften des gegebenen Label,
-     *  also die Farbe, Schrift und Ränder
+     * Die Methode setzt die Eigenschaften des gegebenen Labels,
+     * also die Farbe, Schrift und Ränder
      *
      * @param l
      * @param text
@@ -159,8 +160,8 @@ public class EventErstellenPanel extends JPanel {
     }
 
     /**
-     *  Die Methode setzt die Eigenschaften des gegebenen Label,
-     *  also die Farbe, Schrift und Ränder
+     * Die Methode setzt die Eigenschaften des gegebenen Labels,
+     * also die Farbe, Schrift und Ränder
      *
      * @param l
      * @param text

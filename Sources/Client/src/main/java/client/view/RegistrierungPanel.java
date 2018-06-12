@@ -8,6 +8,14 @@ import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
+
+/**
+ * Die Klasse RegistrierungPanel erzeugt das Registrierungpanel.
+ *
+ * @author SEEMANN Manuel, BURIAN Paul
+ * @version 2018-06-12
+ */
+
 public class RegistrierungPanel extends JPanel {
     private Controller c;
     private JLabel main, benutzerText, passwortText, emailText;
@@ -17,6 +25,11 @@ public class RegistrierungPanel extends JPanel {
     private static final Border border = BorderFactory.createLineBorder(new Color(0, 150, 0), 3);
     private static final Border border2 = new EmptyBorder(10, 10, 10, 10);
 
+    /**
+     * Der Konstruktor des Registrierpanels
+     *
+     * @param c
+     */
     public RegistrierungPanel(Controller c) {
         this.c = c;
         this.setLayout(new BorderLayout());
@@ -28,17 +41,6 @@ public class RegistrierungPanel extends JPanel {
         this.emailEingabe = new JTextField();
         this.zurueckButton = new JButton();
         this.eingabeButton = new JButton();
-
-        /*
-        this.add(this.benutzerText);
-        this.add(this.benutzerEingabe);
-        this.add(this.passwortText);
-        this.add(this.passwortEingabe);
-        this.add(this.emailText);
-        this.add(this.emailEingabe);
-        this.add(this.zurueckButton);
-        this.add(this.eingabeButton);
-        */
 
 
         //North Start
@@ -153,7 +155,7 @@ public class RegistrierungPanel extends JPanel {
     }
 
     /**
-     * Die Methode setzt die Eigenschaften des gegebenen Label,
+     * Die Methode setzt die Eigenschaften des gegebenen Labels,
      * also die Farbe, Schrift, Ränder und setzt es in einen Container
      *
      * @param l
@@ -173,7 +175,7 @@ public class RegistrierungPanel extends JPanel {
     }
 
     /**
-     * Die Methode setzt die Eigenschaften des gegebenen Label,
+     * Die Methode setzt die Eigenschaften des gegebenen Labels,
      * also die Farbe, Schrift, Ränder und Position
      *
      * @param l

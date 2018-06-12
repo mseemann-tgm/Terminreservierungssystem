@@ -8,6 +8,13 @@ import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
+/**
+ * Die Klasse ProfilPanel erzeugt das Profilpanel.
+ *
+ * @author SEEMANN Manuel, BURIAN Paul
+ * @version 2018-06-12
+ */
+
 public class ProfilPanel extends JPanel {
     private Controller c;
     private JButton abmeldenButton;
@@ -28,8 +35,6 @@ public class ProfilPanel extends JPanel {
         this.con1.add(blank, BorderLayout.CENTER);
         this.con1.add(abmeldenButton, BorderLayout.SOUTH);
         this.add(con1);
-
-        //this.add(this.abmeldenButton);
 
         this.abmeldenButton.addActionListener(c);
     }

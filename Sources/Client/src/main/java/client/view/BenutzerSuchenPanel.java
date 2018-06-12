@@ -9,6 +9,13 @@ import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.util.ArrayList;
 
+/**
+ * Die Klasse BenutzerSuchenPanel erzeugt das Benutzersuchenpanel.
+ *
+ * @author SEEMANN Manuel, BURIAN Paul
+ * @version 2018-06-12
+ */
+
 public class BenutzerSuchenPanel extends JPanel {
     private Controller c;
     private JLabel benutzerEingabeText;
@@ -57,6 +64,10 @@ public class BenutzerSuchenPanel extends JPanel {
 
     }
 
+    /**
+     * @param b
+     * @return true or false, true wenn gedrückt, false sonst immer
+     */
     public boolean benutzerEingabeButtonGedrueckt(Object b) {
         if (b == this.benutzerEingabeButton) return true;
         return false;
@@ -71,8 +82,8 @@ public class BenutzerSuchenPanel extends JPanel {
     }
 
     /**
-     *  Die Methode setzt die Eigenschaften des gegebenen Buttons,
-     *  also die Farbe, Schrift und Ränder
+     * Die Methode setzt die Eigenschaften des gegebenen Buttons,
+     * also die Farbe, Schrift und Ränder
      *
      * @param b
      * @param text
@@ -87,8 +98,8 @@ public class BenutzerSuchenPanel extends JPanel {
     }
 
     /**
-     *  Die Methode setzt die Eigenschaften des gegebenen Textfields,
-     *  also die Farbe, Schrift und Ränder
+     * Die Methode setzt die Eigenschaften des gegebenen Textfields,
+     * also die Farbe, Schrift und Ränder
      *
      * @param tf
      */
@@ -101,8 +112,8 @@ public class BenutzerSuchenPanel extends JPanel {
     }
 
     /**
-     *  Die Methode setzt die Eigenschaften des gegebenen Label,
-     *  also die Farbe, Schrift und Ränder
+     * Die Methode setzt die Eigenschaften des gegebenen Labels,
+     * also die Farbe, Schrift und Ränder
      *
      * @param l
      * @param text
@@ -118,6 +129,12 @@ public class BenutzerSuchenPanel extends JPanel {
         l.setHorizontalAlignment(SwingConstants.CENTER);
     }
 
+    /**
+     * Die Methode setzt die Eigenschaften der gegebenen Liste,
+     * also die Farbe, Schrift und Ränder
+     *
+     * @param l
+     */
     private void beautifulList(JList l) {
         l.setFont(new Font(l.getFont().getName(), 1, 20));
         l.setBackground(new Color(0, 50, 0));

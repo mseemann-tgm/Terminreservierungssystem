@@ -8,6 +8,13 @@ import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
+/**
+ * Die Klasse LoginPanel erzeugt das Loginpanel.
+ *
+ * @author SEEMANN Manuel, BURIAN Paul
+ * @version 2018-06-12
+ */
+
 public class LoginPanel extends JPanel {
     private Controller c;
     private JLabel benutzerText, passwortText, main;
@@ -61,19 +68,27 @@ public class LoginPanel extends JPanel {
 
     }
 
+    /**
+     * @param b
+     * @return true or false, true wenn gedrückt, false sonst immer
+     */
     public boolean eingabeButtonGedrueckt(Object b) {
         if (b == this.eingabeButton) return true;
         return false;
     }
 
+    /**
+     * @param b
+     * @return true or false, true wenn gedrückt, false sonst immer
+     */
     public boolean registrierungButtonGedrueckt(Object b) {
         if (b == this.registrierungButton) return true;
         return false;
     }
 
     /**
-     *  Die Methode setzt die Eigenschaften des gegebenen Buttons,
-     *  also die Farbe, Schrift und Ränder
+     * Die Methode setzt die Eigenschaften des gegebenen Buttons,
+     * also die Farbe, Schrift und Ränder
      *
      * @param b
      * @param text
@@ -90,8 +105,8 @@ public class LoginPanel extends JPanel {
     }
 
     /**
-     *  Die Methode setzt die Eigenschaften des gegebenen Textfields,
-     *  also die Farbe, Schrift und Ränder
+     * Die Methode setzt die Eigenschaften des gegebenen Textfields,
+     * also die Farbe, Schrift und Ränder
      *
      * @param tf
      * @param con
@@ -106,8 +121,8 @@ public class LoginPanel extends JPanel {
     }
 
     /**
-     *  Die Methode setzt die Eigenschaften des gegebenen Label,
-     *  also die Farbe, Schrift und Ränder
+     * Die Methode setzt die Eigenschaften des gegebenen Label,
+     * also die Farbe, Schrift und Ränder
      *
      * @param l
      * @param text
@@ -126,8 +141,8 @@ public class LoginPanel extends JPanel {
     }
 
     /**
-     *  Die Methode setzt die Eigenschaften des gegebenen Buttons,
-     *  also die Farbe, Schrift und Ränder
+     * Die Methode setzt die Eigenschaften des gegebenen Buttons,
+     * also die Farbe, Schrift und Ränder
      *
      * @param l
      * @param text
