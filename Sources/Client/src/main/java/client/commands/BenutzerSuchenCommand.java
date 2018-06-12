@@ -3,16 +3,27 @@ package client.commands;
 import client.view.BenutzerSuchenPanel;
 
 import java.util.Arrays;
-
+/**
+ * BenutzerSuchenCommand wird ein DataObject erstellen und übergibt den geuschten Benutzer
+ * @author Manuel Seemann
+ * @version 2018-05-30
+ */
 public class BenutzerSuchenCommand implements Command {
 	private String eingabe;
 	private BenutzerSuchenPanel bsp;
+
+	/**
+	 * Der Konstruktor BenutzerSuchenCommand speichert die Eingabe und das Panel in die Attribute
+	 * @param eingabe
+	 * @param bsp
+	 */
 	public BenutzerSuchenCommand(String eingabe, BenutzerSuchenPanel bsp){
 		this.eingabe = eingabe;
 		this.bsp = bsp;
 
 	}
 	/**
+	 * Hier wird ein Test Array sortiert und zurück geben, außerdem die View geändert
 	 * @see Command#execute()
 	 * 
 	 *  
