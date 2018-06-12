@@ -14,6 +14,11 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * DataTest Testet ob die Daten auf meine lokale SQL Datenbank gespeichert werden können
+ * @author SEEMANN Manuek, Koiner Oskar
+ * @version 2018-06-08
+ */
 public class DataTests{
     private static EntityManagerFactory session;
     private static EntityManager em;
@@ -22,6 +27,9 @@ public class DataTests{
     private Notifikation notifikation;
     private Rolle r;
 
+    /**
+     * clearDatabase löscht alle Einträge aus der Datenbank
+     */
     private static void clearDatabase(){
         em.getTransaction().begin();
         em.createQuery("DELETE FROM Termin").executeUpdate();
@@ -34,6 +42,11 @@ public class DataTests{
         em.getTransaction().commit();
     }
 
+
+    /**
+     * setUp erstellt eine neue Session und ruft clearDatabase auf
+     * @throws Exception
+     */
     @BeforeClass
     public static void setUp() throws Exception {
         session = Persistence.createEntityManagerFactory("Data");
@@ -41,6 +54,10 @@ public class DataTests{
         //Vor dem Testen die Datenbank sicherheitshalber leeren
         clearDatabase();
     }
+
+    /**
+     * init erstellt die benötigeten Daten
+     */
     @Before
     public void init(){
         ArrayList<Rolle> rolle = new ArrayList<Rolle>();
@@ -65,23 +82,36 @@ public class DataTests{
         em.persist(this.event);
         em.persist(this.notifikation);
     }
+
+    /**
+     * tearDown ruft clearDatabase auf
+     * @throws Exception
+     */
     @After
     public void tearDown() throws Exception {
         //Nach dem Testen die Datenbank sicherheitshalber leeren
         clearDatabase();
     }
 
-
+    /**
+     * testEvent testet ob Event in der Datenbank vorhanden ist
+     */
     @Test
     public void testEvent() {
         assertTrue(em.contains(this.event));
     }
 
+    /**
+     * testKommentar testet ob Kommentar in der Datenbank vorhanden ist
+     */
     @Test
     public void testKommentar(){
         assertTrue(em.contains(this.kommentar));
     }
 
+    /**
+     * testNotifikation testet ob Notifikation in der Datenbank vorhanden ist
+     */
     @Test
     public void testNotifikation(){
         assertTrue(em.contains(this.notifikation));
