@@ -27,15 +27,6 @@ public class LoginPanel extends JPanel {
         this.eingabeButton = new JButton();
         this.registrierungButton = new JButton();
 
-        /*
-        this.add(this.benutzerText);
-        this.add(this.benutzerEingabe);
-        this.add(this.passwortText);
-        this.add(this.passwortEingabe);
-        this.add(this.registrierungButton);
-        this.add(this.eingabeButton);
-        */
-
         //North Start
         this.main = new JLabel();
         this.beautifulL(main, "Login", BorderLayout.NORTH);
@@ -80,6 +71,14 @@ public class LoginPanel extends JPanel {
         return false;
     }
 
+    /**
+     *  Die Methode setzt die Eigenschaften des gegebenen Buttons,
+     *  also die Farbe, Schrift und Ränder
+     *
+     * @param b
+     * @param text
+     * @param con
+     */
     private void beautifulB(JButton b, String text, Container con) {
         b.setText(text);
         b.setFont(new Font(b.getFont().getName(), 0, 25));
@@ -90,7 +89,13 @@ public class LoginPanel extends JPanel {
         con.add(b);
     }
 
-
+    /**
+     *  Die Methode setzt die Eigenschaften des gegebenen Textfields,
+     *  also die Farbe, Schrift und Ränder
+     *
+     * @param tf
+     * @param con
+     */
     private void beautifulTF(JTextField tf, Container con) {
         tf.setFont(new Font(tf.getFont().getName(), 0, 25));
         tf.setBackground(new Color(0, 50, 0));
@@ -100,7 +105,14 @@ public class LoginPanel extends JPanel {
         con.add(tf);
     }
 
-
+    /**
+     *  Die Methode setzt die Eigenschaften des gegebenen Label,
+     *  also die Farbe, Schrift und Ränder
+     *
+     * @param l
+     * @param text
+     * @param con
+     */
     private void beautifulL(JLabel l, String text, Container con) {
         l.setText(text);
         l.setFont(new Font(l.getFont().getName(), 1, 30));
@@ -113,6 +125,14 @@ public class LoginPanel extends JPanel {
         con.add(l);
     }
 
+    /**
+     *  Die Methode setzt die Eigenschaften des gegebenen Buttons,
+     *  also die Farbe, Schrift und Ränder
+     *
+     * @param l
+     * @param text
+     * @param cord
+     */
     private void beautifulL(JLabel l, String text, String cord) {
         l.setText(text);
         l.setFont(new Font(l.getFont().getName(), 1, 30));

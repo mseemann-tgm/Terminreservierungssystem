@@ -70,6 +70,13 @@ public class BenutzerSuchenPanel extends JPanel {
         this.benutzerListe.setListData(benutzerGesucht);
     }
 
+    /**
+     *  Die Methode setzt die Eigenschaften des gegebenen Buttons,
+     *  also die Farbe, Schrift und Ränder
+     *
+     * @param b
+     * @param text
+     */
     private void beautifulB(JButton b, String text) {
         b.setText(text);
         b.setFont(new Font(b.getFont().getName(), 0, 25));
@@ -79,6 +86,12 @@ public class BenutzerSuchenPanel extends JPanel {
         b.setBorder(new CompoundBorder(border, border2));
     }
 
+    /**
+     *  Die Methode setzt die Eigenschaften des gegebenen Textfields,
+     *  also die Farbe, Schrift und Ränder
+     *
+     * @param tf
+     */
     private void beautifulTF(JTextField tf) {
         tf.setFont(new Font(tf.getFont().getName(), 0, 25));
         tf.setBackground(new Color(0, 50, 0));
@@ -87,6 +100,13 @@ public class BenutzerSuchenPanel extends JPanel {
         tf.setBorder(new CompoundBorder(border, border2));
     }
 
+    /**
+     *  Die Methode setzt die Eigenschaften des gegebenen Label,
+     *  also die Farbe, Schrift und Ränder
+     *
+     * @param l
+     * @param text
+     */
     private void beautifulL(JLabel l, String text) {
         l.setText(text);
         l.setFont(new Font(l.getFont().getName(), 1, 30));

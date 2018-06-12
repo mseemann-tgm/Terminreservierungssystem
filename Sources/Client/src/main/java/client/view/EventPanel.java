@@ -52,6 +52,13 @@ public class EventPanel extends JPanel {
         l.setBorder(new CompoundBorder(border, border2));
     }
 
+    /**
+     *  Die Methode setzt die Eigenschaften des gegebenen Buttons,
+     *  also die Farbe, Schrift und Ränder
+     *
+     * @param b
+     * @param text
+     */
     private void beautifulB(JButton b, String text) {
         b.setText(text);
         b.setFont(new Font(b.getFont().getName(), 0, 25));

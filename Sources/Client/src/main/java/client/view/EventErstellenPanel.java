@@ -103,6 +103,14 @@ public class EventErstellenPanel extends JPanel {
         return false;
     }
 
+    /**
+     *  Die Methode setzt die Eigenschaften des gegebenen Buttons,
+     *  also die Farbe, Schrift, Ränder und setzt es in einen Container
+     *
+     * @param b
+     * @param text
+     * @param con
+     */
     private void beautifulB(JButton b, String text, Container con) {
         b.setText(text);
         b.setFont(new Font(b.getFont().getName(), 0, 25));
@@ -113,7 +121,13 @@ public class EventErstellenPanel extends JPanel {
         con.add(b);
     }
 
-
+    /**
+     *  Die Methode setzt die Eigenschaften des gegebenen Textfields,
+     *  also die Farbe, Schrift, Ränder und setzt es in einen Container
+     *
+     * @param tf
+     * @param con
+     */
     private void beautifulTF(JTextField tf, Container con) {
         tf.setFont(new Font(tf.getFont().getName(), 0, 20));
         tf.setBackground(new Color(0, 50, 0));
@@ -124,6 +138,14 @@ public class EventErstellenPanel extends JPanel {
     }
 
 
+    /**
+     *  Die Methode setzt die Eigenschaften des gegebenen Label,
+     *  also die Farbe, Schrift und Ränder
+     *
+     * @param l
+     * @param text
+     * @param con
+     */
     private void beautifulL(JLabel l, String text, Container con) {
         l.setText(text);
         l.setFont(new Font(l.getFont().getName(), 1, 25));
@@ -136,6 +158,13 @@ public class EventErstellenPanel extends JPanel {
         con.add(l);
     }
 
+    /**
+     *  Die Methode setzt die Eigenschaften des gegebenen Label,
+     *  also die Farbe, Schrift und Ränder
+     *
+     * @param l
+     * @param text
+     */
     private void beautifulL(JLabel l, String text) {
         l.setText(text);
         l.setFont(new Font(l.getFont().getName(), 1, 25));
