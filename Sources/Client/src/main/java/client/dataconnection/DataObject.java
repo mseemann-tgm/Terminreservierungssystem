@@ -5,7 +5,11 @@ import client.datatype.Termin;
 import client.datatype.User;
 
 import java.util.List;
-
+/**
+ * DataObject ist das interface für die Datenübergabe
+ * @author SEEEMANN Manuel, Koiner Oskar
+ * @version 2018-04-25
+ */
 public interface DataObject {
     boolean register(User user);
     boolean login(User user);

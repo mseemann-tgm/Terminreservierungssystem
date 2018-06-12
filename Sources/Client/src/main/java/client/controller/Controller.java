@@ -7,6 +7,11 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Controller steuert den Client und verbindet View, Panel, Command und Model
+ * @author SEEMANN Manuel
+ * @version 2018-05-23
+ */
 public class Controller implements ActionListener{
 	private LoginPanel lp;
 	private RegistrierungPanel rp;
@@ -17,7 +22,9 @@ public class Controller implements ActionListener{
 	private View v;
 	private Model m;
 
-
+	/**
+	 * Der Konstruktor Controller erstellt alle Panels und Gettet die aktuellen Events
+	 */
 	public Controller(){
 		this.lp = new LoginPanel(this);
 		this.rp = new RegistrierungPanel(this);
@@ -34,6 +41,10 @@ public class Controller implements ActionListener{
 		t.run();
 	}
 
+	/**
+	 * actionPreformed ruft nach einem Button Klick die gewünschten MEthoden auf
+	 * @param e
+	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (this.lp.eingabeButtonGedrueckt((Object) e.getSource()) == true) {

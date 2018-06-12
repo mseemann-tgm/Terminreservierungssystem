@@ -5,8 +5,8 @@ import client.view.BenutzerSuchenPanel;
 import java.util.Arrays;
 /**
  * BenutzerSuchenCommand wird ein DataObject erstellen und übergibt den geuschten Benutzer
- * @author Manuel Seemann
- * @version 2018-05-30
+ * @author SEEEMANN Manuel, Koiner Oskar
+ * @version 2018-04-25
  */
 public class BenutzerSuchenCommand implements Command {
 	private String eingabe;

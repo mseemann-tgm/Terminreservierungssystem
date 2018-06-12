@@ -12,7 +12,11 @@ import client.view.View;
 
 import java.util.ArrayList;
 import java.util.Date;
-
+/**
+ * EventErstellenCommand speichert die Übergabe in die Atrribute und erstellt ein neues Event
+ * @author SEEEMANN Manuel, Koiner Oskar
+ * @version 2018-04-25
+ */
 public class EventErstellenCommand implements Command {
 	private Event event;
 	private EventErstellenPanel eep;
@@ -21,6 +25,15 @@ public class EventErstellenCommand implements Command {
 
 	private ArrayList<Rolle> rolle;
 
+	/**
+	 * Der EventErstellenCommand Konstruktor übergibt alle Attribute und erstellt ein neues DataObject und Event
+	 * @param name
+	 * @param rolle
+	 * @param termin
+	 * @param kommentar
+	 * @param eep
+	 * @param v
+	 */
 	public EventErstellenCommand(String name, String rolle, Date termin, String kommentar, EventErstellenPanel eep, View v){
 		this.eep = eep;
 		this.v = v;
@@ -36,6 +49,7 @@ public class EventErstellenCommand implements Command {
 	}
 
 	/**
+	 * Ruft EventErstellen im DataObject auf und Printet eine Fehlermeldung falls der USer nicht vorhanden ist
 	 * @see Command#execute()
 	 * 
 	 *  

@@ -9,8 +9,8 @@ import client.view.View;
 
 /**
  * Die Klasse AnmeldeCommand erstellt ein DataObject und übergibt die Benutzereingabe
- * @author Manuel Seemann
- * @version 2018-05-30
+ * @author SEEEMANN Manuel, Koiner Oskar
+ * @version 2018-04-25
  *
  */
 public class AnmeldeCommand implements Command {

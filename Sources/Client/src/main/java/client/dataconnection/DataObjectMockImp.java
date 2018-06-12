@@ -7,6 +7,11 @@ import client.datatype.User;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * DataObjectMockImp füttert den Client mit TestDaten
+ * @author SEEEMANN Manuel, Koiner Oskar
+ * @version 2018-04-25
+ */
 public class DataObjectMockImp implements DataObject {
     @Override
     public boolean register(User user) {
